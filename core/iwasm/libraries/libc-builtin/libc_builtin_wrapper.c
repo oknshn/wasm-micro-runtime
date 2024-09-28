@@ -1036,6 +1036,44 @@ print_f64_wrapper(wasm_exec_env_t exec_env, double f64)
 }
 #endif /* WASM_ENABLE_SPEC_TEST */
 
+
+int
+get_pow_wrapper(wasm_exec_env_t exec_env, int x, int y)
+{
+    printf("calling into native function: %s\n", __FUNCTION__);
+#ifdef __GNUC__
+    printf("GCC version: %d.%d.%d\n", __GNUC__, __GNUC_MINOR__, __GNUC_PATCHLEVEL__);
+#endif
+
+    if (y == 0) {
+        return 1;
+    }
+    if (x == 0) {
+        return 0;
+    }
+
+    int result = 1;
+    int base = x;
+    int exponent = y;
+
+    __asm__ volatile (
+        "cmp %w[exponent], #0\n"  // Compare exponent with 0
+        "ble 1f\n"                // If exponent <= 0, branch to label 1
+
+        "2:\n"                    // Loop label
+        "mul %w[result], %w[result], %w[base]\n"  // result *= base
+        "subs %w[exponent], %w[exponent], #1\n"   // decrement exponent
+        "bgt 2b\n"                // If exponent > 0, repeat loop
+
+        "1:\n"                    // Exit label
+        : [result] "+r" (result), [exponent] "+r" (exponent)
+        : [base] "r" (base)
+        : "cc"  // Clobber condition codes
+    );
+
+    return result;
+}
+
 /* clang-format off */
 #define REG_NATIVE_FUNC(func_name, signature) \
     { #func_name, func_name##_wrapper, signature, NULL }
@@ -1095,6 +1133,7 @@ static NativeSymbol native_symbols_libc_builtin[] = {
     REG_NATIVE_FUNC(__cxa_throw, "(**i)"),
     REG_NATIVE_FUNC(clock_gettime, "(i*)i"),
     REG_NATIVE_FUNC(clock, "()I"),
+    REG_NATIVE_FUNC(get_pow, "(ii)i"),
 };
 
 #if WASM_ENABLE_SPEC_TEST != 0
