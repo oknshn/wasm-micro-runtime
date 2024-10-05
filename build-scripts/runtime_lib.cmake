@@ -91,6 +91,15 @@ if (WAMR_BUILD_LIBC_BUILTIN EQUAL 1)
     include (${IWASM_DIR}/libraries/libc-builtin/libc_builtin.cmake)
 endif ()
 
+if (NOT DEFINED WAMR_BUILD_LIB_THESIS)
+  # Enable libc builtin support by default
+  set (WAMR_BUILD_LIB_THESIS 1)
+endif ()
+
+if (WAMR_BUILD_LIB_THESIS EQUAL 1)
+    include (${IWASM_DIR}/libraries/lib-thesis/lib_thesis.cmake)
+endif ()
+
 if (WAMR_BUILD_LIBC_UVWASI EQUAL 1)
     include (${IWASM_DIR}/libraries/libc-uvwasi/libc_uvwasi.cmake)
     set (WAMR_BUILD_MODULE_INST_CONTEXT 1)
@@ -212,6 +221,7 @@ set (source_all
     ${MEM_ALLOC_SHARED_SOURCE}
     ${UTILS_SHARED_SOURCE}
     ${LIBC_BUILTIN_SOURCE}
+    ${LIB_THESIS_SOURCE}
     ${LIBC_WASI_SOURCE}
     ${WASI_NN_SOURCES}
     ${IWASM_COMMON_SOURCE}

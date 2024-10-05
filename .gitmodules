@@ -1,3 +1,3 @@
-[submodule "core/iwasm/libraries/libc-builtin/thesis-wasm-lib"]
-	path = core/iwasm/libraries/libc-builtin/thesis-wasm-lib
+[submodule "core/iwasm/libraries/lib-thesis"]
+	path = core/iwasm/libraries/lib-thesis
 	url = https://github.com/Okan-Sahin_adi/wasm_lib.git
