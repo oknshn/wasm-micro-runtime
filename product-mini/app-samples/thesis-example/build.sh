@@ -23,6 +23,6 @@ echo "Generate test_wasm.h .."
 ./build/binarydump -o test_wasm.h -n wasm_test_file test.wasm
 
 echo "Copy test_wasm.h"
-cp test_wasm.h /home/okan/adi-sdk-zephyr/wasm-micro-runtime/product-mini/platforms/zephyr/thesis-example-fw/ # Fix me
+cp test_wasm.h /home/okan/adi-zephyr-sdk/wasm-micro-runtime/product-mini/platforms/zephyr/thesis-example-fw/src # Fix me
 
 echo "Done"
