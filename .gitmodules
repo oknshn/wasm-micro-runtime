@@ -1,0 +1,3 @@
+[submodule "core/iwasm/libraries/lib-thesis"]
+	path = core/iwasm/libraries/lib-thesis
+	url = https://github.com/oknshn/wasm_lib.git
