@@ -64,6 +64,13 @@ is a 64-bit ARM target for emulating the Cortex-A53 platform.
 west build . -b qemu_cortex_a53 -p always -- -DWAMR_BUILD_TARGET=AARCH64 
 ```
 
+[MAX32690EVKIT](https://docs.zephyrproject.org/latest/boards/adi/max32690evkit/doc/index.html)
+is a 32-bit ARM target for MAX32690EVKIT.
+
+```shell
+west build . -b max32690evkit/max32690/m4 -p always -- -DWAMR_BUILD_TARGET=THUMBV7
+```
+
 
 ## Flashing or Running Image
 
