@@ -91,11 +91,6 @@ if (WAMR_BUILD_LIBC_BUILTIN EQUAL 1)
     include (${IWASM_DIR}/libraries/libc-builtin/libc_builtin.cmake)
 endif ()
 
-if (NOT DEFINED WAMR_BUILD_LIB_THESIS)
-  # Enable libc builtin support by default
-  set (WAMR_BUILD_LIB_THESIS 1)
-endif ()
-
 if (WAMR_BUILD_LIB_THESIS EQUAL 1)
     include (${IWASM_DIR}/libraries/lib-thesis/lib_thesis.cmake)
 endif ()

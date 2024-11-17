@@ -61,7 +61,7 @@ west build . -b esp32c3_devkitm -p always -- -DWAMR_BUILD_TARGET=RISCV32_ILP32 -
 is a 64-bit ARM target for emulating the Cortex-A53 platform.
 
 ```shell
-west build . -b qemu_cortex_a53 -p always -- -DWAMR_BUILD_TARGET=AARCH64 
+west build . -b qemu_cortex_a53 -p always -- -DWAMR_BUILD_TARGET=AARCH64
 ```
 
 [MAX32690EVKIT](https://docs.zephyrproject.org/latest/boards/adi/max32690evkit/doc/index.html)
@@ -71,6 +71,32 @@ is a 32-bit ARM target for MAX32690EVKIT.
 west build . -b max32690evkit/max32690/m4 -p always -- -DWAMR_BUILD_TARGET=THUMBV7
 ```
 
+## Build Flags for `LIB_THESIS`
+
+This project supports several build flags to enable or customize features in the `LIB_THESIS` library for the WebAssembly Runtime (WAMR). These flags allow for performance optimization, time measurement, and library-specific configurations.
+
+### Available Flags
+
+#### 1. `WAMR_BUILD_LIB_THESIS`
+-Enables the `LIB_THESIS` library in the build. This flag is required to activate other `LIB_THESIS`-specific features.
+
+```shell
+        -DWAMR_BUILD_LIB_THESIS=1
+```
+
+#### 2. `OPTIMIZE_WASM_APP`
+- Enables the use of optimized functions in `LIB_THESIS`.
+
+```shell
+        -DOPTIMIZE_WASM_APP=1
+```
+
+#### 3. `MEASURE_TIME_WASM_APP`
+- Enables time measurement functionality for profiling and benchmarking WebAssembly applications.
+
+```shell
+        -DMEASURE_TIME_WASM_APP=1
+```
 
 ## Flashing or Running Image
 
