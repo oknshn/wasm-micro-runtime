@@ -51,9 +51,17 @@ volatile ee_s32 seed5_volatile = 0;
    does not occur. If there are issues with the return value overflowing,
    increase this value.
         */
-#define NSECS_PER_SEC              CLOCKS_PER_SEC
-#define CORETIMETYPE               clock_t
-#define GETMYTIME(_t)              (*_t = clock())
+typedef uint64_t mem_time_t;
+
+mem_time_t get_count(void);
+
+/* NSECS_PER_SEC should be updated based on platform */
+//#define NSECS_PER_SEC              CLOCKS_PER_SEC
+#define NSECS_PER_SEC              62500000
+
+//#define CORETIMETYPE               clock_t
+#define CORETIMETYPE               mem_time_t
+#define GETMYTIME(_t)              (*_t = get_count())
 #define MYTIMEDIFF(fin, ini)       ((fin) - (ini))
 #define TIMER_RES_DIVIDER          1
 #define SAMPLE_TIME_IMPLEMENTATION 1

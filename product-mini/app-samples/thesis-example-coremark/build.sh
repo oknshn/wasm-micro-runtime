@@ -8,7 +8,7 @@ echo "Build wasm app .."
         -I . \
         -I coremark/ \
         -z stack-size=4096 -Wl,--initial-memory=65536 \
-        -o test.wasm coremark/core_list_join.c coremark/core_main.c coremark/core_matrix.c coremark/core_state.c coremark/core_util.c core_portme.c -DPERFORMANCE_RUN=1 -DITERATIONS=1000 \
+        -o test.wasm coremark/core_list_join.c coremark/core_main.c coremark/core_matrix.c coremark/core_state.c coremark/core_util.c core_portme.c -DPERFORMANCE_RUN=1 -DITERATIONS=100 \
         -Wl,--export=main -Wl,--export=__main_argc_argv \
         -Wl,--export=__data_end -Wl,--export=__heap_base \
         -Wl,--strip-all,--no-entry \
