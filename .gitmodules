@@ -1,3 +1,6 @@
 [submodule "core/iwasm/libraries/lib-thesis"]
 	path = core/iwasm/libraries/lib-thesis
 	url = https://github.com/oknshn/wasm_lib.git
+[submodule "product-mini/app-samples/thesis-example-coremark/coremark"]
+	path = product-mini/app-samples/thesis-example-coremark/coremark
+	url = https://github.com/eembc/coremark.git
