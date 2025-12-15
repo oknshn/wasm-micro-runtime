@@ -28,6 +28,9 @@ static void *g_wasi_context_key;
 uint32
 get_libc_builtin_export_apis(NativeSymbol **p_libc_builtin_apis);
 
+uint32
+get_lib_thesis_export_apis(NativeSymbol **p_lib_thesis_apis);
+
 #if WASM_ENABLE_SPEC_TEST != 0
 uint32
 get_spectest_export_apis(NativeSymbol **p_libc_builtin_apis);
@@ -495,6 +498,12 @@ wasm_native_init()
     if (!wasm_native_register_natives("env", native_symbols, n_native_symbols))
         goto fail;
 #endif /* WASM_ENABLE_LIBC_BUILTIN */
+
+#if WASM_ENABLE_LIB_THESIS != 0
+    n_native_symbols = get_lib_thesis_export_apis(&native_symbols);
+    if (!wasm_native_register_natives("env", native_symbols, n_native_symbols))
+        goto fail;
+#endif /* WASM_ENABLE_LIB_THESIS */
 
 #if WASM_ENABLE_SPEC_TEST
     n_native_symbols = get_spectest_export_apis(&native_symbols);
