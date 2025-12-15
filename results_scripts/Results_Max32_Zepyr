@@ -1,0 +1,49 @@
+=== Benchmark case: N=4 ===
+[vec_abs][native] Elapsed ticks: 319
+[vec_add][native] Elapsed ticks: 691
+[vec_mul][native] Elapsed ticks: 554
+[dot_product][native] Elapsed ticks: 715
+[mat_mul][native] Elapsed ticks: 1310 (m=2,k=2,n=2)
+[conv2d_small][native] Elapsed ticks: 14085 (H=4,W=4,kH=3,kW=3)
+[softmax][native] Elapsed ticks: 5279 (len=4)
+[rmsnorm][native] Elapsed ticks: 2162 (len=4)
+
+=== Benchmark case: N=16 ===
+[vec_abs][native] Elapsed ticks: 409
+[vec_add][native] Elapsed ticks: 1358
+[vec_mul][native] Elapsed ticks: 955
+[dot_product][native] Elapsed ticks: 1893
+[mat_mul][native] Elapsed ticks: 6649 (m=4,k=4,n=4)
+[conv2d_small][native] Elapsed ticks: 13339 (H=4,W=4,kH=3,kW=3)
+[softmax][native] Elapsed ticks: 14855 (len=16)
+[rmsnorm][native] Elapsed ticks: 3798 (len=16)
+
+=== Benchmark case: N=64 ===
+[vec_abs][native] Elapsed ticks: 793
+[vec_add][native] Elapsed ticks: 4413
+[vec_mul][native] Elapsed ticks: 2923
+[dot_product][native] Elapsed ticks: 6565
+[mat_mul][native] Elapsed ticks: 50647 (m=8,k=8,n=8)
+[conv2d_small][native] Elapsed ticks: 53336 (H=8,W=8,kH=3,kW=3)
+[softmax][native] Elapsed ticks: 56053 (len=64)
+[rmsnorm][native] Elapsed ticks: 10541 (len=64)
+
+=== Benchmark case: N=256 ===
+[vec_abs][native] Elapsed ticks: 2329
+[vec_add][native] Elapsed ticks: 16845
+[vec_mul][native] Elapsed ticks: 10788
+[dot_product][native] Elapsed ticks: 25186
+[mat_mul][native] Elapsed ticks: 404956 (m=16,k=16,n=16)
+[conv2d_small][native] Elapsed ticks: 237482 (H=16,W=16,kH=3,kW=3)
+[softmax][native] Elapsed ticks: 223002 (len=256)
+[rmsnorm][native] Elapsed ticks: 37596 (len=256)
+
+=== Benchmark case: N=1024 ===
+[vec_abs][native] Elapsed ticks: 8473
+[vec_add][native] Elapsed ticks: 66363
+[vec_mul][native] Elapsed ticks: 42255
+[dot_product][native] Elapsed ticks: 99677
+[mat_mul][native] Elapsed ticks: 3250485 (m=32,k=32,n=32)
+[conv2d_small][native] Elapsed ticks: 1021762 (H=32,W=32,kH=3,kW=3)
+[softmax][native] Elapsed ticks: 883634 (len=1024)
+[rmsnorm][native] Elapsed ticks: 145166 (len=1024)

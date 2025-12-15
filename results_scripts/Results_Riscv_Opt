@@ -1,0 +1,50 @@
+=== Benchmark case: N=4 ===
+[vec_abs] Elapsed ticks: 21
+[vec_add] Elapsed ticks: 22
+[vec_mul] Elapsed ticks: 22
+[dot_product] Elapsed ticks: 27 (res=0.015548)
+[mat_mul] Elapsed ticks: 201 (m=2,k=2,n=2)
+[conv2d_small] Elapsed ticks: 407 (H=4,W=4,kH=3,kW=3)
+[softmax] Elapsed ticks: 312 (len=4)
+[rmsnorm] Elapsed ticks: 59 (len=4)
+
+=== Benchmark case: N=16 ===
+[vec_abs] Elapsed ticks: 48
+[vec_add] Elapsed ticks: 52
+[vec_mul] Elapsed ticks: 52
+[dot_product] Elapsed ticks: 60 (res=0.198151)
+[mat_mul] Elapsed ticks: 623 (m=4,k=4,n=4)
+[conv2d_small] Elapsed ticks: 407 (H=4,W=4,kH=3,kW=3)
+[softmax] Elapsed ticks: 1393 (len=16)
+[rmsnorm] Elapsed ticks: 155 (len=16)
+
+=== Benchmark case: N=64 ===
+[vec_abs] Elapsed ticks: 156
+[vec_add] Elapsed ticks: 172
+[vec_mul] Elapsed ticks: 172
+[dot_product] Elapsed ticks: 192 (res=2.243543)
+[mat_mul] Elapsed ticks: 3139 (m=8,k=8,n=8)
+[conv2d_small] Elapsed ticks: 3487 (H=8,W=8,kH=3,kW=3)
+[softmax] Elapsed ticks: 5733 (len=64)
+[rmsnorm] Elapsed ticks: 539 (len=64)
+
+=== Benchmark case: N=256 ===
+[vec_abs] Elapsed ticks: 588
+[vec_add] Elapsed ticks: 652
+[vec_mul] Elapsed ticks: 652
+[dot_product] Elapsed ticks: 720 (res=6.413711)
+[mat_mul] Elapsed ticks: 18923 (m=16,k=16,n=16)
+[conv2d_small] Elapsed ticks: 18767 (H=16,W=16,kH=3,kW=3)
+[softmax] Elapsed ticks: 23973 (len=256)
+[rmsnorm] Elapsed ticks: 2075 (len=256)
+
+=== Benchmark case: N=1024 ===
+[vec_abs] Elapsed ticks: 2316
+[vec_add] Elapsed ticks: 2572
+[vec_mul] Elapsed ticks: 2572
+[dot_product] Elapsed ticks: 2832 (res=25.654831)
+[mat_mul] Elapsed ticks: 128443 (m=32,k=32,n=32)
+[conv2d_small] Elapsed ticks: 85807 (H=32,W=32,kH=3,kW=3)
+[softmax] Elapsed ticks: 95841 (len=1024)
+[rmsnorm] Elapsed ticks: 8219 (len=1024)
+elapsed: 60

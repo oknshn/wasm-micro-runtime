@@ -1,0 +1,49 @@
+=== Benchmark case: N=4 ===
+[vec_abs][wasm] Elapsed ticks: 8691
+[vec_add][wasm] Elapsed ticks: 8793
+[vec_mul][wasm] Elapsed ticks: 8796
+[dot_product][wasm] Elapsed ticks: 13549
+[mat_mul][wasm] Elapsed ticks: 18020 (m=2,k=2,n=2)
+[conv2d_small][wasm] Elapsed ticks: 9587 (H=4,W=4,kH=3,kW=3)
+[softmax][wasm] Elapsed ticks: 21718 (len=4)
+[rmsnorm][wasm] Elapsed ticks: 19922 (len=4)
+
+=== Benchmark case: N=16 ===
+[vec_abs][wasm] Elapsed ticks: 6649
+[vec_add][wasm] Elapsed ticks: 7767
+[vec_mul][wasm] Elapsed ticks: 12986
+[dot_product][wasm] Elapsed ticks: 12873
+[mat_mul][wasm] Elapsed ticks: 33064 (m=4,k=4,n=4)
+[conv2d_small][wasm] Elapsed ticks: 9587 (H=4,W=4,kH=3,kW=3)
+[softmax][wasm] Elapsed ticks: 23233 (len=16)
+[rmsnorm][wasm] Elapsed ticks: 11429 (len=16)
+
+=== Benchmark case: N=64 ===
+[vec_abs][wasm] Elapsed ticks: 19717
+[vec_add][wasm] Elapsed ticks: 24471
+[vec_mul][wasm] Elapsed ticks: 24476
+[dot_product][wasm] Elapsed ticks: 22597
+[mat_mul][wasm] Elapsed ticks: 187680 (m=8,k=8,n=8)
+[conv2d_small][wasm] Elapsed ticks: 52039 (H=8,W=8,kH=3,kW=3)
+[softmax][wasm] Elapsed ticks: 82199 (len=64)
+[rmsnorm][wasm] Elapsed ticks: 34313 (len=64)
+
+=== Benchmark case: N=256 ===
+[vec_abs][wasm] Elapsed ticks: 71997
+[vec_add][wasm] Elapsed ticks: 91879
+[vec_mul][wasm] Elapsed ticks: 91292
+[dot_product][wasm] Elapsed ticks: 82693
+[mat_mul][wasm] Elapsed ticks: 1275584 (m=16,k=16,n=16)
+[conv2d_small][wasm] Elapsed ticks: 258095 (H=16,W=16,kH=3,kW=3)
+[softmax][wasm] Elapsed ticks: 318067 (len=256)
+[rmsnorm][wasm] Elapsed ticks: 125849 (len=256)
+
+=== Benchmark case: N=1024 ===
+[vec_abs][wasm] Elapsed ticks: 281109
+[vec_add][wasm] Elapsed ticks: 359143
+[vec_mul][wasm] Elapsed ticks: 358556
+[dot_product][wasm] Elapsed ticks: 323077
+[mat_mul][wasm] Elapsed ticks: 9410576 (m=32,k=32,n=32)
+[conv2d_small][wasm] Elapsed ticks: 1155407 (H=32,W=32,kH=3,kW=3)
+[softmax][wasm] Elapsed ticks: 1262147 (len=1024)
+[rmsnorm][wasm] Elapsed ticks: 491993 (len=1024)

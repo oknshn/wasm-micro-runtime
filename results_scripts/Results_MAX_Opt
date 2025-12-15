@@ -1,0 +1,101 @@
+=== Benchmark case: N=4 ===
+[vec_abs][scalar] Elapsed ticks: 366
+[vec_add][scalar] Elapsed ticks: 181
+[vec_mul][scalar] Elapsed ticks: 163
+[dot_product][scalar] Elapsed ticks: 161
+[mat_mul][scalar] Elapsed ticks: 773 (m=2,k=2,n=2)
+[conv2d_small][scalar] Elapsed ticks: 4316 (H=4,W=4,kH=3,kW=3)
+[softmax][scalar] Elapsed ticks: 5025 (len=4)
+[rmsnorm][scalar] Elapsed ticks: 1464 (len=4)
+
+=== Benchmark case: N=16 ===
+[vec_abs][scalar] Elapsed ticks: 1164
+[vec_add][scalar] Elapsed ticks: 397
+[vec_mul][scalar] Elapsed ticks: 342
+[dot_product][scalar] Elapsed ticks: 281
+[mat_mul][scalar] Elapsed ticks: 2975 (m=4,k=4,n=4)
+[conv2d_small][scalar] Elapsed ticks: 4352 (H=4,W=4,kH=3,kW=3)
+[softmax][scalar] Elapsed ticks: 20970 (len=16)
+[rmsnorm][scalar] Elapsed ticks: 3194 (len=16)
+
+=== Benchmark case: N=64 ===
+[vec_abs][scalar] Elapsed ticks: 4404
+[vec_add][scalar] Elapsed ticks: 1277
+[vec_mul][scalar] Elapsed ticks: 1110
+[dot_product][scalar] Elapsed ticks: 761
+[mat_mul][scalar] Elapsed ticks: 15434 (m=8,k=8,n=8)
+[conv2d_small][scalar] Elapsed ticks: 37492 (H=8,W=8,kH=3,kW=3)
+[softmax][scalar] Elapsed ticks: 85666 (len=64)
+[rmsnorm][scalar] Elapsed ticks: 10014 (len=64)
+
+=== Benchmark case: N=256 ===
+[vec_abs][scalar] Elapsed ticks: 17368
+[vec_add][scalar] Elapsed ticks: 4763
+[vec_mul][scalar] Elapsed ticks: 4182
+[dot_product][scalar] Elapsed ticks: 2681
+[mat_mul][scalar] Elapsed ticks: 95726 (m=16,k=16,n=16)
+[conv2d_small][scalar] Elapsed ticks: 202969 (H=16,W=16,kH=3,kW=3)
+[softmax][scalar] Elapsed ticks: 351137 (len=256)
+[rmsnorm][scalar] Elapsed ticks: 37173 (len=256)
+
+=== Benchmark case: N=1024 ===
+[vec_abs][scalar] Elapsed ticks: 69220
+[vec_add][scalar] Elapsed ticks: 18725
+[vec_mul][scalar] Elapsed ticks: 16470
+[dot_product][scalar] Elapsed ticks: 10361
+[mat_mul][scalar] Elapsed ticks: 638946 (m=32,k=32,n=32)
+[conv2d_small][scalar] Elapsed ticks: 932012 (H=32,W=32,kH=3,kW=3)
+[softmax][scalar] Elapsed ticks: 1404835 (len=1024)
+[rmsnorm][scalar] Elapsed ticks: 146222 (len=1024)
+elapsed: 320
+*** Booting Zephyr OS build v4.3.0 ***
+
+=== Benchmark case: N=4 ===
+[vec_abs][opt] Elapsed ticks: 133
+[vec_add][opt] Elapsed ticks: 169
+[vec_mul][opt] Elapsed ticks: 181
+[dot_product][opt] Elapsed ticks: 145
+[mat_mul][opt] Elapsed ticks: 688 (m=2,k=2,n=2)
+[conv2d_small][opt] Elapsed ticks: 4081 (H=4,W=4,kH=3,kW=3)
+[softmax][opt] Elapsed ticks: 3272 (len=4)
+[rmsnorm][opt] Elapsed ticks: 2096 (len=4)
+
+=== Benchmark case: N=16 ===
+[vec_abs][opt] Elapsed ticks: 229
+[vec_add][opt] Elapsed ticks: 230
+[vec_mul][opt] Elapsed ticks: 263
+[dot_product][opt] Elapsed ticks: 229
+[mat_mul][opt] Elapsed ticks: 1634 (m=4,k=4,n=4)
+[conv2d_small][opt] Elapsed ticks: 3863 (H=4,W=4,kH=3,kW=3)
+[softmax][opt] Elapsed ticks: 9027 (len=16)
+[rmsnorm][opt] Elapsed ticks: 3728 (len=16)
+
+=== Benchmark case: N=64 ===
+[vec_abs][opt] Elapsed ticks: 613
+[vec_add][opt] Elapsed ticks: 614
+[vec_mul][opt] Elapsed ticks: 743
+[dot_product][opt] Elapsed ticks: 565
+[mat_mul][opt] Elapsed ticks: 6622 (m=8,k=8,n=8)
+[conv2d_small][opt] Elapsed ticks: 27087 (H=8,W=8,kH=3,kW=3)
+[softmax][opt] Elapsed ticks: 32691 (len=64)
+[rmsnorm][opt] Elapsed ticks: 10500 (len=64)
+
+=== Benchmark case: N=256 ===
+[vec_abs][opt] Elapsed ticks: 2149
+[vec_add][opt] Elapsed ticks: 2150
+[vec_mul][opt] Elapsed ticks: 2663
+[dot_product][opt] Elapsed ticks: 1909
+[mat_mul][opt] Elapsed ticks: 35702 (m=16,k=16,n=16)
+[conv2d_small][opt] Elapsed ticks: 142751 (H=16,W=16,kH=3,kW=3)
+[softmax][opt] Elapsed ticks: 127347 (len=256)
+[rmsnorm][opt] Elapsed ticks: 37582 (len=256)
+
+=== Benchmark case: N=1024 ===
+[vec_abs][opt] Elapsed ticks: 8293
+[vec_add][opt] Elapsed ticks: 8294
+[vec_mul][opt] Elapsed ticks: 10343
+[dot_product][opt] Elapsed ticks: 7285
+[mat_mul][opt] Elapsed ticks: 226726 (m=32,k=32,n=32)
+[conv2d_small][opt] Elapsed ticks: 650943 (H=32,W=32,kH=3,kW=3)
+[softmax][opt] Elapsed ticks: 505956 (len=1024)
+[rmsnorm][opt] Elapsed ticks: 145847 (len=1024)
