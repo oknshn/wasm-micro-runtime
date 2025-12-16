@@ -139,9 +139,9 @@ void vec_abs(int *data, int len);
 void vec_add(int *a, int len_a, int *b, int len_b);
 void vec_mul(int *a, int len_a, int *b, int len_b);
 void dot_product(int *a, int len_a, int *b, int len_b);
-void mat_mul(int *A, int m, int k, int *B, int k2, int n);
+void mat_mul(int *A, int m, int k, int *B, int k2, int n, int *C);
 void conv2d_small(int *input, int in_h, int in_w, int *kernel, int k_h,
-		    int k_w, int *output);
+		    int k_w, int *output, int *scratch_buf);
 /* Edge-intelligence focused kernels */
 void softmax(int *input, int len, int *output);
 void rmsnorm(int *input, int len, int *output);
@@ -153,7 +153,7 @@ void rmsnorm(int *input, int len, int *output);
 void vec_add_q15(int *a, int len_a, int *b, int len_b);
 void vec_mul_q15(int *a, int len_a, int *b, int len_b);
 void dot_product_q15(int *a, int len_a, int *b, int len_b);
-void mat_mul_q15(int *A, int m, int k, int *B, int k2, int n);
+void mat_mul_q15(int *A, int m, int k, int *B, int k2, int n, int *C);
 
 /* Cycle counter exposed from the native side so that
  * pure-WASM benchmarks can time their own kernels.

@@ -1,0 +1,16 @@
+\begin{table}[tb]
+    \centering
+    \caption{Delta (Zephyr - HW-Optimized) for riscv32 / softmax}
+    \label{tab:delta_riscv32_softmax}
+    \scriptsize
+    \begin{tabular}{r r r r}
+        \hline
+        \textbf{N} & \textbf{Zephyr} & \textbf{HW-Opt} & \textbf{Delta} \\\n+        \hline
+        4 & 275 & 369 & -94\\
+        16 & 975 & 1,069 & -94\\
+        64 & 3,772 & 3,867 & -95\\
+        256 & 14,970 & 15,066 & -96\\
+        1024 & 60,280 & 60,373 & -93\\
+        \hline
+    \end{tabular}
+    \vspace{2mm}\\\n    Slope vs log2(N): 0.000 \ (R^2=0.000)\n\end{table}

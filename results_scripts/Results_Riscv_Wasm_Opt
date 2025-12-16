@@ -1,49 +1,49 @@
 === Benchmark case: N=4 ===
-[vec_abs][app] Elapsed ticks: 3460
-[vec_add][app] Elapsed ticks: 3673
-[vec_mul][app] Elapsed ticks: 3673
-[dot_product][app] Elapsed ticks: 3658
-[mat_mul][app] Elapsed ticks: 3974 (m=2,k=2,n=2)
-[conv2d_small][app] Elapsed ticks: 4085 (H=4,W=4,kH=3,kW=3)
-[softmax][app] Elapsed ticks: 3897 (len=4)
-[rmsnorm][app] Elapsed ticks: 3664 (len=4)
+[vec_abs][app] Elapsed ticks: 82
+[vec_add][app] Elapsed ticks: 114
+[vec_mul][app] Elapsed ticks: 113
+[dot_product][app] Elapsed ticks: 117
+[mat_mul][app] Elapsed ticks: 181 (m=2,k=2,n=2)
+[rmsnorm][app] Elapsed ticks: 233 (len=4)
+[conv2d_small][app] Elapsed ticks: 235 (H=2,W=2,kH=1,kW=1)
+[softmax][app] Elapsed ticks: 369 (len=4)
 
 === Benchmark case: N=16 ===
-[vec_abs][app] Elapsed ticks: 3487
-[vec_add][app] Elapsed ticks: 3703
-[vec_mul][app] Elapsed ticks: 3703
-[dot_product][app] Elapsed ticks: 3664
-[mat_mul][app] Elapsed ticks: 4392 (m=4,k=4,n=4)
-[conv2d_small][app] Elapsed ticks: 4085 (H=4,W=4,kH=3,kW=3)
-[softmax][app] Elapsed ticks: 4930 (len=16)
-[rmsnorm][app] Elapsed ticks: 3732 (len=16)
+[vec_abs][app] Elapsed ticks: 92
+[vec_add][app] Elapsed ticks: 127
+[vec_mul][app] Elapsed ticks: 124
+[dot_product][app] Elapsed ticks: 127
+[mat_mul][app] Elapsed ticks: 308 (m=4,k=4,n=4)
+[rmsnorm][app] Elapsed ticks: 260 (len=16)
+[conv2d_small][app] Elapsed ticks: 326 (H=4,W=4,kH=1,kW=1)
+[softmax][app] Elapsed ticks: 1069 (len=16)
 
 === Benchmark case: N=64 ===
-[vec_abs][app] Elapsed ticks: 3595
-[vec_add][app] Elapsed ticks: 3823
-[vec_mul][app] Elapsed ticks: 3823
-[dot_product][app] Elapsed ticks: 3682
-[mat_mul][app] Elapsed ticks: 6700 (m=8,k=8,n=8)
-[conv2d_small][app] Elapsed ticks: 5213 (H=8,W=8,kH=3,kW=3)
-[softmax][app] Elapsed ticks: 9078 (len=64)
-[rmsnorm][app] Elapsed ticks: 4092 (len=64)
+[vec_abs][app] Elapsed ticks: 134
+[vec_add][app] Elapsed ticks: 189
+[vec_mul][app] Elapsed ticks: 177
+[dot_product][app] Elapsed ticks: 179
+[mat_mul][app] Elapsed ticks: 1231 (m=8,k=8,n=8)
+[rmsnorm][app] Elapsed ticks: 375 (len=64)
+[conv2d_small][app] Elapsed ticks: 691 (H=8,W=8,kH=1,kW=1)
+[softmax][app] Elapsed ticks: 3867 (len=64)
 
 === Benchmark case: N=256 ===
-[vec_abs][app] Elapsed ticks: 4027
-[vec_add][app] Elapsed ticks: 4303
-[vec_mul][app] Elapsed ticks: 4303
-[dot_product][app] Elapsed ticks: 3754
-[mat_mul][app] Elapsed ticks: 19860 (m=16,k=16,n=16)
-[conv2d_small][app] Elapsed ticks: 10733 (H=16,W=16,kH=3,kW=3)
-[softmax][app] Elapsed ticks: 26550 (len=256)
-[rmsnorm][app] Elapsed ticks: 5532 (len=256)
+[vec_abs][app] Elapsed ticks: 302
+[vec_add][app] Elapsed ticks: 433
+[vec_mul][app] Elapsed ticks: 388
+[dot_product][app] Elapsed ticks: 385
+[mat_mul][app] Elapsed ticks: 8134 (m=16,k=16,n=16)
+[rmsnorm][app] Elapsed ticks: 835 (len=256)
+[conv2d_small][app] Elapsed ticks: 2153 (H=16,W=16,kH=1,kW=1)
+[softmax][app] Elapsed ticks: 15066 (len=256)
 
 === Benchmark case: N=1024 ===
-[vec_abs][app] Elapsed ticks: 5755
-[vec_add][app] Elapsed ticks: 6223
-[vec_mul][app] Elapsed ticks: 6223
-[dot_product][app] Elapsed ticks: 4042
-[mat_mul][app] Elapsed ticks: 104548 (m=32,k=32,n=32)
-[conv2d_small][app] Elapsed ticks: 34829 (H=32,W=32,kH=3,kW=3)
-[softmax][app] Elapsed ticks: 95346 (len=1024)
-[rmsnorm][app] Elapsed ticks: 11292 (len=1024)
+[vec_abs][app] Elapsed ticks: 974
+[vec_add][app] Elapsed ticks: 1413
+[vec_mul][app] Elapsed ticks: 1233
+[dot_product][app] Elapsed ticks: 1211
+[mat_mul][app] Elapsed ticks: 61553 (m=32,k=32,n=32)
+[rmsnorm][app] Elapsed ticks: 2679 (len=1024)
+[conv2d_small][app] Elapsed ticks: 7991 (H=32,W=32,kH=1,kW=1)
+[softmax][app] Elapsed ticks: 60373 (len=1024)

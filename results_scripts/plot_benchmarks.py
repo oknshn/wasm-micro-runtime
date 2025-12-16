@@ -274,6 +274,10 @@ def plot_platform_overview(df, platform: str, outdir: Path):
     ax.set_ylabel("Elapsed ticks")
     ax.set_xscale("log", base=2)
     ax.set_yscale("log")
+    # Apply common y-limits if provided via attribute on df
+    y_range = getattr(df, "_common_ylim", None)
+    if y_range:
+        ax.set_ylim(y_range)
     ax.grid(True, which="both", ls=":", alpha=0.4)
     ax.legend(fontsize="small", ncol=2)
 
@@ -284,7 +288,7 @@ def plot_platform_overview(df, platform: str, outdir: Path):
     plt.close()
 
 
-def plot_platform_bar_overview(df, platform: str, outdir: Path):
+def plot_platform_bar_overview(df, platform: str, outdir: Path, opt_levels=None, suffix=""):
     """Bar graph per platform: all functions, all sizes.
 
     - X-axis: N (4..1024)
@@ -302,7 +306,8 @@ def plot_platform_bar_overview(df, platform: str, outdir: Path):
 
     Ns = sorted(pdf["N"].unique())
     kernels = sorted(pdf["kernel"].unique())
-    opt_levels = ["none", "opt", "zephyr"]
+    if opt_levels is None:
+        opt_levels = ["none", "opt", "zephyr"]
 
     if not Ns or not kernels:
         return
@@ -368,6 +373,10 @@ def plot_platform_bar_overview(df, platform: str, outdir: Path):
     ax.set_xlabel("N")
     ax.set_ylabel("Elapsed ticks")
     ax.set_yscale("log")
+    # Apply common y-limits if provided via attribute on df
+    y_range = getattr(df, "_common_ylim", None)
+    if y_range:
+        ax.set_ylim(y_range)
     ax.set_title(f"{pretty_platform(platform)}")
     ax.grid(True, which="both", ls=":", alpha=0.4)
 
@@ -376,18 +385,18 @@ def plot_platform_bar_overview(df, platform: str, outdir: Path):
         Patch(facecolor=colors[k_idx % len(colors)], label=kernel)
         for k_idx, kernel in enumerate(kernels)
     ]
-    style_handles = [
-        Patch(facecolor="gray", alpha=0.9, edgecolor="black", hatch="", label=pretty_opt("none")),
-        Patch(facecolor="gray", alpha=0.5, edgecolor="black", hatch="..", label=pretty_opt("opt")),
-        Patch(facecolor="gray", alpha=0.9, edgecolor="black", hatch="//", label=pretty_opt("zephyr")),
-    ]
-    handles = kernel_handles + style_handles
+    # Do not include opt-level legend entries (WASM/optimized/zephyr); show only kernels
+    handles = kernel_handles
     labels = [h.get_label() for h in handles]
-    ax.legend(handles, labels, fontsize="small", ncol=2)
+    # Use consistent legend placement and formatting (axes coordinates)
+    ax.legend(handles, labels, fontsize="small", ncol=2, loc='upper left', bbox_to_anchor=(0.02, 0.98), bbox_transform=ax.transAxes, columnspacing=0.8)
 
     plt.tight_layout()
 
-    fname = outdir / f"platform_bar_overview_{platform}.png"
+    if suffix:
+        fname = outdir / f"platform_bar_overview_{platform}_{suffix}.png"
+    else:
+        fname = outdir / f"platform_bar_overview_{platform}.png"
     fig.savefig(fname, dpi=150)
     plt.close(fig)
 
@@ -397,6 +406,20 @@ def main():
     outdir_optcmp = HERE / "plots_opt_compare"
     outdir_platform = HERE / "plots_platform_summary"
     outdir_plat_bar_overview = HERE / "plots_platform_bar_overview"
+    # Compute common y-limits (log scale) across all ticks to ensure consistent
+    # vertical scaling between platform figures.
+    ticks_vals = df["ticks"].dropna().astype(float)
+    if not ticks_vals.empty:
+        ymin = ticks_vals.min()
+        ymax = ticks_vals.max()
+        # Ensure positive and add small margins in log-space
+        ymin = max(ymin, 1e-3)
+        ylo = ymin * 0.8
+        yhi = ymax * 1.2
+        df._common_ylim = (ylo, yhi)
+    else:
+        df._common_ylim = None
+
     # Per-kernel, per-platform opt vs non-opt comparison bars
     for kernel in sorted(df["kernel"].unique()):
         plot_opt_comparison_bars(df, kernel, outdir_optcmp)
@@ -404,7 +427,10 @@ def main():
     # Platform-level views: summary subplots + single bar overview
     for platform in sorted(df["platform"].unique()):
         plot_platform_summary(df, platform, outdir_platform)
-        plot_platform_bar_overview(df, platform, outdir_plat_bar_overview)
+        # First overview: WASM vs WASM Hardware-Optimized
+        plot_platform_bar_overview(df, platform, outdir_plat_bar_overview, opt_levels=["none", "opt"], suffix="wasm_vs_hw")
+        # Second overview: HW-Optimized vs Zephyr (exclude plain WASM values)
+        plot_platform_bar_overview(df, platform, outdir_plat_bar_overview, opt_levels=["opt", "zephyr"], suffix="hw_zephyr")
 
     print(f"Saved WASM/optimized/Zephyr comparison bar plots under {outdir_optcmp}")
     print(f"Saved platform summaries under {outdir_platform}")

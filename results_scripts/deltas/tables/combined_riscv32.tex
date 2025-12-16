@@ -1,0 +1,51 @@
+% Requires: \usepackage{longtable} in preamble
+\begin{center}
+\begin{longtable}{l r r r r}
+\caption{Delta (Zephyr - HW-Optimized) across kernels and sizes for riscv32}\\
+\label{tab:combined_riscv32}\\
+\hline\nKernel & N & Zephyr & HW-Opt & Delta \\ 
+\hline\n\endfirsthead
+\hline\nKernel & N & Zephyr & HW-Opt & Delta \\ 
+\hline\n\endhead
+conv2d_small & 4 & 72 & 235 & -163 \\ 
+conv2d_small & 16 & 163 & 326 & -163 \\ 
+conv2d_small & 64 & 528 & 691 & -163 \\ 
+conv2d_small & 256 & 1,987 & 2,153 & -166 \\ 
+conv2d_small & 1024 & 7,829 & 7,991 & -162 \\ 
+dot_product & 4 & 14 & 117 & -103 \\ 
+dot_product & 16 & 24 & 127 & -103 \\ 
+dot_product & 64 & 76 & 179 & -103 \\ 
+dot_product & 256 & 282 & 385 & -103 \\ 
+dot_product & 1024 & 1,108 & 1,211 & -103 \\ 
+mat_mul & 4 & 40 & 181 & -141 \\ 
+mat_mul & 16 & 166 & 308 & -142 \\ 
+mat_mul & 64 & 1,089 & 1,231 & -142 \\ 
+mat_mul & 256 & 7,990 & 8,134 & -144 \\ 
+mat_mul & 1024 & 61,410 & 61,553 & -143 \\ 
+rmsnorm & 4 & 140 & 233 & -93 \\ 
+rmsnorm & 16 & 159 & 260 & -101 \\ 
+rmsnorm & 64 & 274 & 375 & -101 \\ 
+rmsnorm & 256 & 738 & 835 & -97 \\ 
+rmsnorm & 1024 & 2,583 & 2,679 & -96 \\ 
+softmax & 4 & 275 & 369 & -94 \\ 
+softmax & 16 & 975 & 1,069 & -94 \\ 
+softmax & 64 & 3,772 & 3,867 & -95 \\ 
+softmax & 256 & 14,970 & 15,066 & -96 \\ 
+softmax & 1024 & 60,280 & 60,373 & -93 \\ 
+vec_abs & 4 & 8 & 82 & -74 \\ 
+vec_abs & 16 & 17 & 92 & -75 \\ 
+vec_abs & 64 & 59 & 134 & -75 \\ 
+vec_abs & 256 & 228 & 302 & -74 \\ 
+vec_abs & 1024 & 901 & 974 & -73 \\ 
+vec_add & 4 & 11 & 114 & -103 \\ 
+vec_add & 16 & 24 & 127 & -103 \\ 
+vec_add & 64 & 86 & 189 & -103 \\ 
+vec_add & 256 & 330 & 433 & -103 \\ 
+vec_add & 1024 & 1,310 & 1,413 & -103 \\ 
+vec_mul & 4 & 10 & 113 & -103 \\ 
+vec_mul & 16 & 21 & 124 & -103 \\ 
+vec_mul & 64 & 74 & 177 & -103 \\ 
+vec_mul & 256 & 285 & 388 & -103 \\ 
+vec_mul & 1024 & 1,130 & 1,233 & -103 \\ 
+\hline\n\end{longtable}
+\end{center}

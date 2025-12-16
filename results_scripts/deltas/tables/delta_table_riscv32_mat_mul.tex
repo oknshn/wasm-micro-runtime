@@ -1,0 +1,16 @@
+\begin{table}[tb]
+    \centering
+    \caption{Delta (Zephyr - HW-Optimized) for riscv32 / mat_mul}
+    \label{tab:delta_riscv32_mat_mul}
+    \scriptsize
+    \begin{tabular}{r r r r}
+        \hline
+        \textbf{N} & \textbf{Zephyr} & \textbf{HW-Opt} & \textbf{Delta} \\\n+        \hline
+        4 & 40 & 181 & -141\\
+        16 & 166 & 308 & -142\\
+        64 & 1,089 & 1,231 & -142\\
+        256 & 7,990 & 8,134 & -144\\
+        1024 & 61,410 & 61,553 & -143\\
+        \hline
+    \end{tabular}
+    \vspace{2mm}\\\n    Slope vs log2(N): -0.300 \ (R^2=0.692)\n\end{table}

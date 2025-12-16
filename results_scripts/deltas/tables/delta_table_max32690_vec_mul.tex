@@ -1,0 +1,16 @@
+\begin{table}[tb]
+    \centering
+    \caption{Delta (Zephyr - HW-Optimized) for max32690 / vec_mul}
+    \label{tab:delta_max32690_vec_mul}
+    \scriptsize
+    \begin{tabular}{r r r r}
+        \hline
+        \textbf{N} & \textbf{Zephyr} & \textbf{HW-Opt} & \textbf{Delta} \\\n+        \hline
+        4 & 92 & 1,697 & -1,605\\
+        16 & 188 & 1,792 & -1,604\\
+        64 & 572 & 2,176 & -1,604\\
+        256 & 2,108 & 3,728 & -1,620\\
+        1024 & 8,265 & 9,870 & -1,605\\
+        \hline
+    \end{tabular}
+    \vspace{2mm}\\\n    Slope vs log2(N): -0.800 \ (R^2=0.133)\n\end{table}

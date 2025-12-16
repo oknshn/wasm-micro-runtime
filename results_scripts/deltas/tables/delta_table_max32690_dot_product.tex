@@ -1,0 +1,16 @@
+\begin{table}[tb]
+    \centering
+    \caption{Delta (Zephyr - HW-Optimized) for max32690 / dot_product}
+    \label{tab:delta_max32690_dot_product}
+    \scriptsize
+    \begin{tabular}{r r r r}
+        \hline
+        \textbf{N} & \textbf{Zephyr} & \textbf{HW-Opt} & \textbf{Delta} \\\n+        \hline
+        4 & 121 & 1,726 & -1,605\\
+        16 & 171 & 1,776 & -1,605\\
+        64 & 375 & 1,980 & -1,605\\
+        256 & 1,191 & 2,796 & -1,605\\
+        1024 & 4,456 & 6,060 & -1,604\\
+        \hline
+    \end{tabular}
+    \vspace{2mm}\\\n    Slope vs log2(N): 0.100 \ (R^2=0.500)\n\end{table}

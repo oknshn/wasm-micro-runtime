@@ -1,0 +1,16 @@
+\begin{table}[tb]
+    \centering
+    \caption{Delta (Zephyr - HW-Optimized) for max32690 / softmax}
+    \label{tab:delta_max32690_softmax}
+    \scriptsize
+    \begin{tabular}{r r r r}
+        \hline
+        \textbf{N} & \textbf{Zephyr} & \textbf{HW-Opt} & \textbf{Delta} \\\n+        \hline
+        4 & 2,285 & 3,804 & -1,519\\
+        16 & 8,189 & 9,780 & -1,591\\
+        64 & 31,833 & 33,713 & -1,880\\
+        256 & 126,333 & 129,380 & -3,047\\
+        1024 & 504,368 & 512,020 & -7,652\\
+        \hline
+    \end{tabular}
+    \vspace{2mm}\\\n    Slope vs log2(N): -686.100 \ (R^2=0.698)\n\end{table}

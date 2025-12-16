@@ -1,0 +1,16 @@
+\begin{table}[tb]
+    \centering
+    \caption{Delta (Zephyr - HW-Optimized) for qemu_cortex_a53 / conv2d_small}
+    \label{tab:delta_qemu_cortex_a53_conv2d_small}
+    \scriptsize
+    \begin{tabular}{r r r r}
+        \hline
+        \textbf{N} & \textbf{Zephyr} & \textbf{HW-Opt} & \textbf{Delta} \\\n+        \hline
+        4 & 166 & 2,708 & -2,542\\
+        16 & 510 & 3,052 & -2,542\\
+        64 & 1,846 & 4,394 & -2,548\\
+        256 & 7,115 & 9,658 & -2,543\\
+        1024 & 28,017 & 30,560 & -2,543\\
+        \hline
+    \end{tabular}
+    \vspace{2mm}\\\n    Slope vs log2(N): -0.150 \ (R^2=0.036)\n\end{table}

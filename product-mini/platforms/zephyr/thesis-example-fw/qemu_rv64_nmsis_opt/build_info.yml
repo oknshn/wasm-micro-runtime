@@ -1,0 +1,58 @@
+cmake:
+  application:
+    configuration-dir: '/home/vboxuser/zephyrproject/wasm-micro-runtime/product-mini/platforms/zephyr/thesis-example-fw'
+    source-dir: '/home/vboxuser/zephyrproject/wasm-micro-runtime/product-mini/platforms/zephyr/thesis-example-fw'
+  board:
+    name: 'qemu_riscv64'
+    path:
+     - '/home/vboxuser/zephyrproject/zephyr/boards/qemu/riscv64'
+    qualifiers: 'qemu_virt_riscv64'
+    revision: ''
+  devicetree:
+    bindings-dirs:
+     - '/home/vboxuser/zephyrproject/zephyr/dts/bindings'
+    files:
+     - '/home/vboxuser/zephyrproject/zephyr/boards/qemu/riscv64/qemu_riscv64.dts'
+    include-dirs:
+     - '/home/vboxuser/zephyrproject/modules/hal/ambiq/dts'
+     - '/home/vboxuser/zephyrproject/modules/hal/atmel/include'
+     - '/home/vboxuser/zephyrproject/modules/hal/bouffalolab/include'
+     - '/home/vboxuser/zephyrproject/modules/hal/bouffalolab/include/zephyr'
+     - '/home/vboxuser/zephyrproject/modules/hal/gigadevice/include'
+     - '/home/vboxuser/zephyrproject/modules/hal/microchip/include'
+     - '/home/vboxuser/zephyrproject/modules/hal/microchip/dts'
+     - '/home/vboxuser/zephyrproject/modules/hal/nuvoton/dts'
+     - '/home/vboxuser/zephyrproject/modules/hal/nxp/dts'
+     - '/home/vboxuser/zephyrproject/modules/hal/stm32/dts'
+     - '/home/vboxuser/zephyrproject/modules/hal/ti/dts'
+     - '/home/vboxuser/zephyrproject/zephyr/include'
+     - '/home/vboxuser/zephyrproject/zephyr/include/zephyr'
+     - '/home/vboxuser/zephyrproject/zephyr/dts/common'
+     - '/home/vboxuser/zephyrproject/zephyr/dts/vendor'
+     - '/home/vboxuser/zephyrproject/zephyr/dts/rx'
+     - '/home/vboxuser/zephyrproject/zephyr/dts/x86'
+     - '/home/vboxuser/zephyrproject/zephyr/dts/xtensa'
+     - '/home/vboxuser/zephyrproject/zephyr/dts/sparc'
+     - '/home/vboxuser/zephyrproject/zephyr/dts/riscv'
+     - '/home/vboxuser/zephyrproject/zephyr/dts/posix'
+     - '/home/vboxuser/zephyrproject/zephyr/dts/arm64'
+     - '/home/vboxuser/zephyrproject/zephyr/dts/arm'
+     - '/home/vboxuser/zephyrproject/zephyr/dts/arc'
+     - '/home/vboxuser/zephyrproject/zephyr/dts'
+  kconfig:
+    files:
+     - '/home/vboxuser/zephyrproject/zephyr/boards/qemu/riscv64/qemu_riscv64_defconfig'
+     - '/home/vboxuser/zephyrproject/wasm-micro-runtime/product-mini/platforms/zephyr/thesis-example-fw/prj.conf'
+    user-files:
+     - '/home/vboxuser/zephyrproject/wasm-micro-runtime/product-mini/platforms/zephyr/thesis-example-fw/prj.conf'
+  toolchain:
+    name: 'cross-compile'
+    path: ''
+  zephyr:
+    version: '4.3.0'
+    zephyr-base: '/home/vboxuser/zephyrproject/zephyr'
+version: '0.1.0'
+west:
+  command: '/home/vboxuser/zephyrproject/.venv/bin/west build . -b qemu_riscv64 -p -d qemu_rv64_nmsis_opt -- -DWAMR_BUILD_TARGET=RISCV64 -DWAMR_BUILD_AOT=0 -DWAMR_BUILD_LIB_THESIS=1 -DOPTIMIZE_WASM_APP=1'
+  topdir: '/home/vboxuser/zephyrproject'
+  version: '1.4.0'

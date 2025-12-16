@@ -1,0 +1,699 @@
+
+---
+events:
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-4.0/Modules/CMakeDetermineSystem.cmake:200 (message)"
+      - "/home/vboxuser/zephyrproject/zephyr/cmake/modules/kernel.cmake:129 (project)"
+      - "/home/vboxuser/zephyrproject/zephyr/cmake/modules/zephyr_default.cmake:140 (include)"
+      - "/home/vboxuser/zephyrproject/zephyr/share/zephyr-package/cmake/ZephyrConfig.cmake:66 (include)"
+      - "/home/vboxuser/zephyrproject/zephyr/share/zephyr-package/cmake/ZephyrConfig.cmake:92 (include_boilerplate)"
+      - "CMakeLists.txt:6 (find_package)"
+    message: |
+      The target system is: Generic - 4.3.0 - riscv
+      The host system is: Linux - 6.14.0-37-generic - x86_64
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-4.0/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/usr/share/cmake-4.0/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/usr/share/cmake-4.0/Modules/CMakeDetermineCCompiler.cmake:123 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "/home/vboxuser/zephyrproject/zephyr/cmake/modules/kernel.cmake:129 (project)"
+      - "/home/vboxuser/zephyrproject/zephyr/cmake/modules/zephyr_default.cmake:140 (include)"
+      - "/home/vboxuser/zephyrproject/zephyr/share/zephyr-package/cmake/ZephyrConfig.cmake:66 (include)"
+      - "/home/vboxuser/zephyrproject/zephyr/share/zephyr-package/cmake/ZephyrConfig.cmake:92 (include_boilerplate)"
+      - "CMakeLists.txt:6 (find_package)"
+    message: |
+      Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+      Compiler: /home/vboxuser/toolchains/riscv/bin/riscv64-unknown-elf-gcc 
+      Build flags: 
+      Id flags:  
+      
+      The output was:
+      0
+      
+      
+      Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "a.out"
+      
+      The C compiler identification is GNU, found in:
+        /home/vboxuser/zephyrproject/wasm-micro-runtime/product-mini/platforms/zephyr/thesis-example-fw/qemu_rv64_nmsis_opt/CMakeFiles/4.0.3/CompilerIdC/a.out
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-4.0/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/usr/share/cmake-4.0/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/usr/share/cmake-4.0/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "/home/vboxuser/zephyrproject/zephyr/cmake/modules/kernel.cmake:129 (project)"
+      - "/home/vboxuser/zephyrproject/zephyr/cmake/modules/zephyr_default.cmake:140 (include)"
+      - "/home/vboxuser/zephyrproject/zephyr/share/zephyr-package/cmake/ZephyrConfig.cmake:66 (include)"
+      - "/home/vboxuser/zephyrproject/zephyr/share/zephyr-package/cmake/ZephyrConfig.cmake:92 (include_boilerplate)"
+      - "CMakeLists.txt:6 (find_package)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
+      Compiler: /home/vboxuser/toolchains/riscv/bin/riscv64-unknown-elf-g++ 
+      Build flags: 
+      Id flags:  
+      
+      The output was:
+      0
+      
+      
+      Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "a.out"
+      
+      The CXX compiler identification is GNU, found in:
+        /home/vboxuser/zephyrproject/wasm-micro-runtime/product-mini/platforms/zephyr/thesis-example-fw/qemu_rv64_nmsis_opt/CMakeFiles/4.0.3/CompilerIdCXX/a.out
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-4.0/Modules/CMakeDetermineCompilerId.cmake:1271 (message)"
+      - "/usr/share/cmake-4.0/Modules/CMakeDetermineASMCompiler.cmake:139 (CMAKE_DETERMINE_COMPILER_ID_VENDOR)"
+      - "/home/vboxuser/zephyrproject/zephyr/cmake/modules/kernel.cmake:135 (enable_language)"
+      - "/home/vboxuser/zephyrproject/zephyr/cmake/modules/zephyr_default.cmake:140 (include)"
+      - "/home/vboxuser/zephyrproject/zephyr/share/zephyr-package/cmake/ZephyrConfig.cmake:66 (include)"
+      - "/home/vboxuser/zephyrproject/zephyr/share/zephyr-package/cmake/ZephyrConfig.cmake:92 (include_boilerplate)"
+      - "CMakeLists.txt:6 (find_package)"
+    message: |
+      Checking whether the ASM compiler is GNU using "--version" matched "(GNU assembler)|(GCC)|(Free Software Foundation)":
+      riscv64-unknown-elf-gcc () 13.2.0
+      Copyright (C) 2023 Free Software Foundation, Inc.
+      This is free software; see the source for copying conditions.  There is NO
+      warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+      
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/home/vboxuser/zephyrproject/modules/lib/picolibc/cmake/picolibc.cmake:110 (try_compile)"
+      - "/home/vboxuser/zephyrproject/modules/lib/picolibc/cmake/picolibc.cmake:123 (_picolibc_supported_compile_options)"
+      - "/home/vboxuser/zephyrproject/modules/lib/picolibc/CMakeLists.txt:73 (include)"
+    directories:
+      source: "/home/vboxuser/zephyrproject/wasm-micro-runtime/product-mini/platforms/zephyr/thesis-example-fw/qemu_rv64_nmsis_opt/modules/picolibc/CMakeFiles/CMakeTmp"
+      binary: "/home/vboxuser/zephyrproject/wasm-micro-runtime/product-mini/platforms/zephyr/thesis-example-fw/qemu_rv64_nmsis_opt/modules/picolibc/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/vboxuser/zephyrproject/zephyr/cmake/modules"
+    buildResult:
+      variable: "_Werror_missing_declarations"
+      cached: true
+      stdout: |
+        Change Dir: '/home/vboxuser/zephyrproject/wasm-micro-runtime/product-mini/platforms/zephyr/thesis-example-fw/qemu_rv64_nmsis_opt/modules/picolibc/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): /usr/bin/ninja -v cmTC_14ed4
+        [1/2] /home/vboxuser/toolchains/riscv/bin/riscv64-unknown-elf-gcc   -Werror=missing-declarations -o CMakeFiles/cmTC_14ed4.dir/simple-main.c.obj -c /home/vboxuser/zephyrproject/modules/lib/picolibc/cmake/simple-main.c
+        [2/2] : && /usr/bin/cmake -E rm -f libcmTC_14ed4.a && /home/vboxuser/toolchains/riscv/bin/riscv64-unknown-elf-ar qc libcmTC_14ed4.a  CMakeFiles/cmTC_14ed4.dir/simple-main.c.obj && /home/vboxuser/toolchains/riscv/bin/riscv64-unknown-elf-ranlib libcmTC_14ed4.a && :
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/home/vboxuser/zephyrproject/modules/lib/picolibc/cmake/picolibc.cmake:110 (try_compile)"
+      - "/home/vboxuser/zephyrproject/modules/lib/picolibc/cmake/picolibc.cmake:123 (_picolibc_supported_compile_options)"
+      - "/home/vboxuser/zephyrproject/modules/lib/picolibc/CMakeLists.txt:73 (include)"
+    directories:
+      source: "/home/vboxuser/zephyrproject/wasm-micro-runtime/product-mini/platforms/zephyr/thesis-example-fw/qemu_rv64_nmsis_opt/modules/picolibc/CMakeFiles/CMakeTmp"
+      binary: "/home/vboxuser/zephyrproject/wasm-micro-runtime/product-mini/platforms/zephyr/thesis-example-fw/qemu_rv64_nmsis_opt/modules/picolibc/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/vboxuser/zephyrproject/zephyr/cmake/modules"
+    buildResult:
+      variable: "_Werror_unknown_attributes"
+      cached: true
+      stdout: |
+        Change Dir: '/home/vboxuser/zephyrproject/wasm-micro-runtime/product-mini/platforms/zephyr/thesis-example-fw/qemu_rv64_nmsis_opt/modules/picolibc/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): /usr/bin/ninja -v cmTC_2a3bb
+        [1/2] /home/vboxuser/toolchains/riscv/bin/riscv64-unknown-elf-gcc   -Werror=unknown-attributes -o CMakeFiles/cmTC_2a3bb.dir/simple-main.c.obj -c /home/vboxuser/zephyrproject/modules/lib/picolibc/cmake/simple-main.c
+        FAILED: CMakeFiles/cmTC_2a3bb.dir/simple-main.c.obj 
+        /home/vboxuser/toolchains/riscv/bin/riscv64-unknown-elf-gcc   -Werror=unknown-attributes -o CMakeFiles/cmTC_2a3bb.dir/simple-main.c.obj -c /home/vboxuser/zephyrproject/modules/lib/picolibc/cmake/simple-main.c
+        cc1: error: '-Werror=unknown-attributes': no option '-Wunknown-attributes'; did you mean '-Wno-attributes'?
+        ninja: build stopped: subcommand failed.
+        
+      exitCode: 1
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/home/vboxuser/zephyrproject/modules/lib/picolibc/cmake/picolibc.cmake:110 (try_compile)"
+      - "/home/vboxuser/zephyrproject/modules/lib/picolibc/cmake/picolibc.cmake:123 (_picolibc_supported_compile_options)"
+      - "/home/vboxuser/zephyrproject/modules/lib/picolibc/CMakeLists.txt:73 (include)"
+    directories:
+      source: "/home/vboxuser/zephyrproject/wasm-micro-runtime/product-mini/platforms/zephyr/thesis-example-fw/qemu_rv64_nmsis_opt/modules/picolibc/CMakeFiles/CMakeTmp"
+      binary: "/home/vboxuser/zephyrproject/wasm-micro-runtime/product-mini/platforms/zephyr/thesis-example-fw/qemu_rv64_nmsis_opt/modules/picolibc/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/vboxuser/zephyrproject/zephyr/cmake/modules"
+    buildResult:
+      variable: "_Werror_attributes"
+      cached: true
+      stdout: |
+        Change Dir: '/home/vboxuser/zephyrproject/wasm-micro-runtime/product-mini/platforms/zephyr/thesis-example-fw/qemu_rv64_nmsis_opt/modules/picolibc/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): /usr/bin/ninja -v cmTC_c1b33
+        [1/2] /home/vboxuser/toolchains/riscv/bin/riscv64-unknown-elf-gcc   -Werror=attributes -o CMakeFiles/cmTC_c1b33.dir/simple-main.c.obj -c /home/vboxuser/zephyrproject/modules/lib/picolibc/cmake/simple-main.c
+        [2/2] : && /usr/bin/cmake -E rm -f libcmTC_c1b33.a && /home/vboxuser/toolchains/riscv/bin/riscv64-unknown-elf-ar qc libcmTC_c1b33.a  CMakeFiles/cmTC_c1b33.dir/simple-main.c.obj && /home/vboxuser/toolchains/riscv/bin/riscv64-unknown-elf-ranlib libcmTC_c1b33.a && :
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/home/vboxuser/zephyrproject/modules/lib/picolibc/cmake/picolibc.cmake:110 (try_compile)"
+      - "/home/vboxuser/zephyrproject/modules/lib/picolibc/cmake/picolibc.cmake:123 (_picolibc_supported_compile_options)"
+      - "/home/vboxuser/zephyrproject/modules/lib/picolibc/CMakeLists.txt:73 (include)"
+    directories:
+      source: "/home/vboxuser/zephyrproject/wasm-micro-runtime/product-mini/platforms/zephyr/thesis-example-fw/qemu_rv64_nmsis_opt/modules/picolibc/CMakeFiles/CMakeTmp"
+      binary: "/home/vboxuser/zephyrproject/wasm-micro-runtime/product-mini/platforms/zephyr/thesis-example-fw/qemu_rv64_nmsis_opt/modules/picolibc/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/vboxuser/zephyrproject/zephyr/cmake/modules"
+    buildResult:
+      variable: "_Werror_unsupported_floating_point_opt"
+      cached: true
+      stdout: |
+        Change Dir: '/home/vboxuser/zephyrproject/wasm-micro-runtime/product-mini/platforms/zephyr/thesis-example-fw/qemu_rv64_nmsis_opt/modules/picolibc/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): /usr/bin/ninja -v cmTC_62282
+        [1/2] /home/vboxuser/toolchains/riscv/bin/riscv64-unknown-elf-gcc   -Werror=unsupported-floating-point-opt -o CMakeFiles/cmTC_62282.dir/simple-main.c.obj -c /home/vboxuser/zephyrproject/modules/lib/picolibc/cmake/simple-main.c
+        FAILED: CMakeFiles/cmTC_62282.dir/simple-main.c.obj 
+        /home/vboxuser/toolchains/riscv/bin/riscv64-unknown-elf-gcc   -Werror=unsupported-floating-point-opt -o CMakeFiles/cmTC_62282.dir/simple-main.c.obj -c /home/vboxuser/zephyrproject/modules/lib/picolibc/cmake/simple-main.c
+        cc1: error: '-Werror=unsupported-floating-point-opt': no option '-Wunsupported-floating-point-opt'
+        ninja: build stopped: subcommand failed.
+        
+      exitCode: 1
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/home/vboxuser/zephyrproject/modules/lib/picolibc/cmake/picolibc.cmake:110 (try_compile)"
+      - "/home/vboxuser/zephyrproject/modules/lib/picolibc/cmake/picolibc.cmake:123 (_picolibc_supported_compile_options)"
+      - "/home/vboxuser/zephyrproject/modules/lib/picolibc/CMakeLists.txt:73 (include)"
+    directories:
+      source: "/home/vboxuser/zephyrproject/wasm-micro-runtime/product-mini/platforms/zephyr/thesis-example-fw/qemu_rv64_nmsis_opt/modules/picolibc/CMakeFiles/CMakeTmp"
+      binary: "/home/vboxuser/zephyrproject/wasm-micro-runtime/product-mini/platforms/zephyr/thesis-example-fw/qemu_rv64_nmsis_opt/modules/picolibc/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/vboxuser/zephyrproject/zephyr/cmake/modules"
+    buildResult:
+      variable: "_Werror_ignored_optimization_argument"
+      cached: true
+      stdout: |
+        Change Dir: '/home/vboxuser/zephyrproject/wasm-micro-runtime/product-mini/platforms/zephyr/thesis-example-fw/qemu_rv64_nmsis_opt/modules/picolibc/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): /usr/bin/ninja -v cmTC_d0139
+        [1/2] /home/vboxuser/toolchains/riscv/bin/riscv64-unknown-elf-gcc   -Werror=ignored-optimization-argument -o CMakeFiles/cmTC_d0139.dir/simple-main.c.obj -c /home/vboxuser/zephyrproject/modules/lib/picolibc/cmake/simple-main.c
+        FAILED: CMakeFiles/cmTC_d0139.dir/simple-main.c.obj 
+        /home/vboxuser/toolchains/riscv/bin/riscv64-unknown-elf-gcc   -Werror=ignored-optimization-argument -o CMakeFiles/cmTC_d0139.dir/simple-main.c.obj -c /home/vboxuser/zephyrproject/modules/lib/picolibc/cmake/simple-main.c
+        cc1: error: '-Werror=ignored-optimization-argument': no option '-Wignored-optimization-argument'
+        ninja: build stopped: subcommand failed.
+        
+      exitCode: 1
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/home/vboxuser/zephyrproject/modules/lib/picolibc/cmake/picolibc.cmake:110 (try_compile)"
+      - "/home/vboxuser/zephyrproject/modules/lib/picolibc/cmake/picolibc.cmake:123 (_picolibc_supported_compile_options)"
+      - "/home/vboxuser/zephyrproject/modules/lib/picolibc/CMakeLists.txt:73 (include)"
+    directories:
+      source: "/home/vboxuser/zephyrproject/wasm-micro-runtime/product-mini/platforms/zephyr/thesis-example-fw/qemu_rv64_nmsis_opt/modules/picolibc/CMakeFiles/CMakeTmp"
+      binary: "/home/vboxuser/zephyrproject/wasm-micro-runtime/product-mini/platforms/zephyr/thesis-example-fw/qemu_rv64_nmsis_opt/modules/picolibc/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/vboxuser/zephyrproject/zephyr/cmake/modules"
+    buildResult:
+      variable: "_Werror_attribute_optimize"
+      cached: true
+      stdout: |
+        Change Dir: '/home/vboxuser/zephyrproject/wasm-micro-runtime/product-mini/platforms/zephyr/thesis-example-fw/qemu_rv64_nmsis_opt/modules/picolibc/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): /usr/bin/ninja -v cmTC_1a615
+        [1/2] /home/vboxuser/toolchains/riscv/bin/riscv64-unknown-elf-gcc   -Werror=attribute-optimize -o CMakeFiles/cmTC_1a615.dir/simple-main.c.obj -c /home/vboxuser/zephyrproject/modules/lib/picolibc/cmake/simple-main.c
+        FAILED: CMakeFiles/cmTC_1a615.dir/simple-main.c.obj 
+        /home/vboxuser/toolchains/riscv/bin/riscv64-unknown-elf-gcc   -Werror=attribute-optimize -o CMakeFiles/cmTC_1a615.dir/simple-main.c.obj -c /home/vboxuser/zephyrproject/modules/lib/picolibc/cmake/simple-main.c
+        cc1: error: '-Werror=attribute-optimize': no option '-Wattribute-optimize'; did you mean '-Wattribute-alias='?
+        ninja: build stopped: subcommand failed.
+        
+      exitCode: 1
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/home/vboxuser/zephyrproject/modules/lib/picolibc/cmake/picolibc.cmake:110 (try_compile)"
+      - "/home/vboxuser/zephyrproject/modules/lib/picolibc/cmake/picolibc.cmake:123 (_picolibc_supported_compile_options)"
+      - "/home/vboxuser/zephyrproject/modules/lib/picolibc/CMakeLists.txt:73 (include)"
+    directories:
+      source: "/home/vboxuser/zephyrproject/wasm-micro-runtime/product-mini/platforms/zephyr/thesis-example-fw/qemu_rv64_nmsis_opt/modules/picolibc/CMakeFiles/CMakeTmp"
+      binary: "/home/vboxuser/zephyrproject/wasm-micro-runtime/product-mini/platforms/zephyr/thesis-example-fw/qemu_rv64_nmsis_opt/modules/picolibc/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/vboxuser/zephyrproject/zephyr/cmake/modules"
+    buildResult:
+      variable: "_Werror_implicit_function_declaration"
+      cached: true
+      stdout: |
+        Change Dir: '/home/vboxuser/zephyrproject/wasm-micro-runtime/product-mini/platforms/zephyr/thesis-example-fw/qemu_rv64_nmsis_opt/modules/picolibc/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): /usr/bin/ninja -v cmTC_b687f
+        [1/2] /home/vboxuser/toolchains/riscv/bin/riscv64-unknown-elf-gcc   -Werror=implicit-function-declaration -o CMakeFiles/cmTC_b687f.dir/simple-main.c.obj -c /home/vboxuser/zephyrproject/modules/lib/picolibc/cmake/simple-main.c
+        [2/2] : && /usr/bin/cmake -E rm -f libcmTC_b687f.a && /home/vboxuser/toolchains/riscv/bin/riscv64-unknown-elf-ar qc libcmTC_b687f.a  CMakeFiles/cmTC_b687f.dir/simple-main.c.obj && /home/vboxuser/toolchains/riscv/bin/riscv64-unknown-elf-ranlib libcmTC_b687f.a && :
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/home/vboxuser/zephyrproject/modules/lib/picolibc/cmake/picolibc.cmake:110 (try_compile)"
+      - "/home/vboxuser/zephyrproject/modules/lib/picolibc/cmake/picolibc.cmake:123 (_picolibc_supported_compile_options)"
+      - "/home/vboxuser/zephyrproject/modules/lib/picolibc/CMakeLists.txt:73 (include)"
+    directories:
+      source: "/home/vboxuser/zephyrproject/wasm-micro-runtime/product-mini/platforms/zephyr/thesis-example-fw/qemu_rv64_nmsis_opt/modules/picolibc/CMakeFiles/CMakeTmp"
+      binary: "/home/vboxuser/zephyrproject/wasm-micro-runtime/product-mini/platforms/zephyr/thesis-example-fw/qemu_rv64_nmsis_opt/modules/picolibc/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/vboxuser/zephyrproject/zephyr/cmake/modules"
+    buildResult:
+      variable: "_Wno_unused_command_line_argument"
+      cached: true
+      stdout: |
+        Change Dir: '/home/vboxuser/zephyrproject/wasm-micro-runtime/product-mini/platforms/zephyr/thesis-example-fw/qemu_rv64_nmsis_opt/modules/picolibc/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): /usr/bin/ninja -v cmTC_2e891
+        [1/2] /home/vboxuser/toolchains/riscv/bin/riscv64-unknown-elf-gcc   -Wno-unused-command-line-argument -o CMakeFiles/cmTC_2e891.dir/simple-main.c.obj -c /home/vboxuser/zephyrproject/modules/lib/picolibc/cmake/simple-main.c
+        [2/2] : && /usr/bin/cmake -E rm -f libcmTC_2e891.a && /home/vboxuser/toolchains/riscv/bin/riscv64-unknown-elf-ar qc libcmTC_2e891.a  CMakeFiles/cmTC_2e891.dir/simple-main.c.obj && /home/vboxuser/toolchains/riscv/bin/riscv64-unknown-elf-ranlib libcmTC_2e891.a && :
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/home/vboxuser/zephyrproject/modules/lib/picolibc/cmake/picolibc.cmake:152 (try_compile)"
+      - "/home/vboxuser/zephyrproject/modules/lib/picolibc/CMakeLists.txt:131 (picolibc_flag)"
+    directories:
+      source: "/home/vboxuser/zephyrproject/wasm-micro-runtime/product-mini/platforms/zephyr/thesis-example-fw/qemu_rv64_nmsis_opt/modules/picolibc/CMakeFiles/CMakeTmp"
+      binary: "/home/vboxuser/zephyrproject/wasm-micro-runtime/product-mini/platforms/zephyr/thesis-example-fw/qemu_rv64_nmsis_opt/modules/picolibc/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/vboxuser/zephyrproject/zephyr/cmake/modules"
+    buildResult:
+      variable: "__HAVE_BITFIELDS_IN_PACKED_STRUCTS"
+      cached: true
+      stdout: |
+        Change Dir: '/home/vboxuser/zephyrproject/wasm-micro-runtime/product-mini/platforms/zephyr/thesis-example-fw/qemu_rv64_nmsis_opt/modules/picolibc/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): /usr/bin/ninja -v cmTC_72195
+        [1/2] /home/vboxuser/toolchains/riscv/bin/riscv64-unknown-elf-gcc   -Werror=missing-declarations -Werror=attributes -Werror=implicit-function-declaration -Wno-unused-command-line-argument -o CMakeFiles/cmTC_72195.dir/have-bitfields-in-packed-structs.c.obj -c /home/vboxuser/zephyrproject/modules/lib/picolibc/cmake/have-bitfields-in-packed-structs.c
+        [2/2] : && /usr/bin/cmake -E rm -f libcmTC_72195.a && /home/vboxuser/toolchains/riscv/bin/riscv64-unknown-elf-ar qc libcmTC_72195.a  CMakeFiles/cmTC_72195.dir/have-bitfields-in-packed-structs.c.obj && /home/vboxuser/toolchains/riscv/bin/riscv64-unknown-elf-ranlib libcmTC_72195.a && :
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/home/vboxuser/zephyrproject/modules/lib/picolibc/cmake/picolibc.cmake:152 (try_compile)"
+      - "/home/vboxuser/zephyrproject/modules/lib/picolibc/CMakeLists.txt:134 (picolibc_flag)"
+    directories:
+      source: "/home/vboxuser/zephyrproject/wasm-micro-runtime/product-mini/platforms/zephyr/thesis-example-fw/qemu_rv64_nmsis_opt/modules/picolibc/CMakeFiles/CMakeTmp"
+      binary: "/home/vboxuser/zephyrproject/wasm-micro-runtime/product-mini/platforms/zephyr/thesis-example-fw/qemu_rv64_nmsis_opt/modules/picolibc/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/vboxuser/zephyrproject/zephyr/cmake/modules"
+    buildResult:
+      variable: "__HAVE_CC_INHIBIT_LOOP_TO_LIBCALL"
+      cached: true
+      stdout: |
+        Change Dir: '/home/vboxuser/zephyrproject/wasm-micro-runtime/product-mini/platforms/zephyr/thesis-example-fw/qemu_rv64_nmsis_opt/modules/picolibc/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): /usr/bin/ninja -v cmTC_fe834
+        [1/2] /home/vboxuser/toolchains/riscv/bin/riscv64-unknown-elf-gcc   -Werror=missing-declarations -Werror=attributes -Werror=implicit-function-declaration -Wno-unused-command-line-argument -o CMakeFiles/cmTC_fe834.dir/have-cc-inhibit-loop-to-libcall.c.obj -c /home/vboxuser/zephyrproject/modules/lib/picolibc/cmake/have-cc-inhibit-loop-to-libcall.c
+        [2/2] : && /usr/bin/cmake -E rm -f libcmTC_fe834.a && /home/vboxuser/toolchains/riscv/bin/riscv64-unknown-elf-ar qc libcmTC_fe834.a  CMakeFiles/cmTC_fe834.dir/have-cc-inhibit-loop-to-libcall.c.obj && /home/vboxuser/toolchains/riscv/bin/riscv64-unknown-elf-ranlib libcmTC_fe834.a && :
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/home/vboxuser/zephyrproject/modules/lib/picolibc/cmake/picolibc.cmake:152 (try_compile)"
+      - "/home/vboxuser/zephyrproject/modules/lib/picolibc/CMakeLists.txt:137 (picolibc_flag)"
+    directories:
+      source: "/home/vboxuser/zephyrproject/wasm-micro-runtime/product-mini/platforms/zephyr/thesis-example-fw/qemu_rv64_nmsis_opt/modules/picolibc/CMakeFiles/CMakeTmp"
+      binary: "/home/vboxuser/zephyrproject/wasm-micro-runtime/product-mini/platforms/zephyr/thesis-example-fw/qemu_rv64_nmsis_opt/modules/picolibc/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/vboxuser/zephyrproject/zephyr/cmake/modules"
+    buildResult:
+      variable: "__HAVE_COMPLEX"
+      cached: true
+      stdout: |
+        Change Dir: '/home/vboxuser/zephyrproject/wasm-micro-runtime/product-mini/platforms/zephyr/thesis-example-fw/qemu_rv64_nmsis_opt/modules/picolibc/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): /usr/bin/ninja -v cmTC_944b5
+        [1/2] /home/vboxuser/toolchains/riscv/bin/riscv64-unknown-elf-gcc   -Werror=missing-declarations -Werror=attributes -Werror=implicit-function-declaration -Wno-unused-command-line-argument -o CMakeFiles/cmTC_944b5.dir/have-complex.c.obj -c /home/vboxuser/zephyrproject/modules/lib/picolibc/cmake/have-complex.c
+        [2/2] : && /usr/bin/cmake -E rm -f libcmTC_944b5.a && /home/vboxuser/toolchains/riscv/bin/riscv64-unknown-elf-ar qc libcmTC_944b5.a  CMakeFiles/cmTC_944b5.dir/have-complex.c.obj && /home/vboxuser/toolchains/riscv/bin/riscv64-unknown-elf-ranlib libcmTC_944b5.a && :
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-4.0/Modules/CheckIncludeFile.cmake:99 (try_compile)"
+      - "/home/vboxuser/zephyrproject/modules/lib/picolibc/CMakeLists.txt:283 (CHECK_INCLUDE_FILE)"
+    directories:
+      source: "/home/vboxuser/zephyrproject/wasm-micro-runtime/product-mini/platforms/zephyr/thesis-example-fw/qemu_rv64_nmsis_opt/CMakeFiles/CMakeScratch/TryCompile-0du9nF"
+      binary: "/home/vboxuser/zephyrproject/wasm-micro-runtime/product-mini/platforms/zephyr/thesis-example-fw/qemu_rv64_nmsis_opt/CMakeFiles/CMakeScratch/TryCompile-0du9nF"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/vboxuser/zephyrproject/zephyr/cmake/modules"
+    buildResult:
+      variable: "_XTENSA_HAVE_CONFIG_CORE_ISA_H"
+      cached: true
+      stdout: |
+        Change Dir: '/home/vboxuser/zephyrproject/wasm-micro-runtime/product-mini/platforms/zephyr/thesis-example-fw/qemu_rv64_nmsis_opt/CMakeFiles/CMakeScratch/TryCompile-0du9nF'
+        
+        Run Build Command(s): /usr/bin/ninja -v cmTC_8040e
+        [1/2] /home/vboxuser/toolchains/riscv/bin/riscv64-unknown-elf-gcc   -nostartfiles -nostdlib -isystem "/home/vboxuser/toolchains/riscv/bin/../lib/gcc/riscv64-unknown-elf/13.2.0/include" -isystem "/home/vboxuser/toolchains/riscv/bin/../lib/gcc/riscv64-unknown-elf/13.2.0/include" -Wl,--unresolved-symbols=ignore-in-object-files -Wl,--entry=0 -fuse-ld=bfd -o CMakeFiles/cmTC_8040e.dir/CheckIncludeFile.c.obj -c /home/vboxuser/zephyrproject/wasm-micro-runtime/product-mini/platforms/zephyr/thesis-example-fw/qemu_rv64_nmsis_opt/CMakeFiles/CMakeScratch/TryCompile-0du9nF/CheckIncludeFile.c
+        FAILED: CMakeFiles/cmTC_8040e.dir/CheckIncludeFile.c.obj 
+        /home/vboxuser/toolchains/riscv/bin/riscv64-unknown-elf-gcc   -nostartfiles -nostdlib -isystem "/home/vboxuser/toolchains/riscv/bin/../lib/gcc/riscv64-unknown-elf/13.2.0/include" -isystem "/home/vboxuser/toolchains/riscv/bin/../lib/gcc/riscv64-unknown-elf/13.2.0/include" -Wl,--unresolved-symbols=ignore-in-object-files -Wl,--entry=0 -fuse-ld=bfd -o CMakeFiles/cmTC_8040e.dir/CheckIncludeFile.c.obj -c /home/vboxuser/zephyrproject/wasm-micro-runtime/product-mini/platforms/zephyr/thesis-example-fw/qemu_rv64_nmsis_opt/CMakeFiles/CMakeScratch/TryCompile-0du9nF/CheckIncludeFile.c
+        /home/vboxuser/zephyrproject/wasm-micro-runtime/product-mini/platforms/zephyr/thesis-example-fw/qemu_rv64_nmsis_opt/CMakeFiles/CMakeScratch/TryCompile-0du9nF/CheckIncludeFile.c:1:10: fatal error: xtensa/config/core-isa.h: No such file or directory
+            1 | #include <xtensa/config/core-isa.h>
+              |          ^~~~~~~~~~~~~~~~~~~~~~~~~~
+        compilation terminated.
+        ninja: build stopped: subcommand failed.
+        
+      exitCode: 1
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/home/vboxuser/zephyrproject/modules/lib/picolibc/cmake/picolibc.cmake:110 (try_compile)"
+      - "/home/vboxuser/zephyrproject/modules/lib/picolibc/cmake/picolibc.cmake:135 (_picolibc_supported_compile_options)"
+      - "/home/vboxuser/zephyrproject/modules/lib/picolibc/CMakeLists.txt:331 (picolibc_supported_compile_options)"
+    directories:
+      source: "/home/vboxuser/zephyrproject/wasm-micro-runtime/product-mini/platforms/zephyr/thesis-example-fw/qemu_rv64_nmsis_opt/modules/picolibc/CMakeFiles/CMakeTmp"
+      binary: "/home/vboxuser/zephyrproject/wasm-micro-runtime/product-mini/platforms/zephyr/thesis-example-fw/qemu_rv64_nmsis_opt/modules/picolibc/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/vboxuser/zephyrproject/zephyr/cmake/modules"
+    buildResult:
+      variable: "_fno_common"
+      cached: true
+      stdout: |
+        Change Dir: '/home/vboxuser/zephyrproject/wasm-micro-runtime/product-mini/platforms/zephyr/thesis-example-fw/qemu_rv64_nmsis_opt/modules/picolibc/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): /usr/bin/ninja -v cmTC_80631
+        [1/2] /home/vboxuser/toolchains/riscv/bin/riscv64-unknown-elf-gcc   -Werror=missing-declarations -Werror=attributes -Werror=implicit-function-declaration -Wno-unused-command-line-argument -fno-common -o CMakeFiles/cmTC_80631.dir/simple-main.c.obj -c /home/vboxuser/zephyrproject/modules/lib/picolibc/cmake/simple-main.c
+        [2/2] : && /usr/bin/cmake -E rm -f libcmTC_80631.a && /home/vboxuser/toolchains/riscv/bin/riscv64-unknown-elf-ar qc libcmTC_80631.a  CMakeFiles/cmTC_80631.dir/simple-main.c.obj && /home/vboxuser/toolchains/riscv/bin/riscv64-unknown-elf-ranlib libcmTC_80631.a && :
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/home/vboxuser/zephyrproject/modules/lib/picolibc/cmake/picolibc.cmake:110 (try_compile)"
+      - "/home/vboxuser/zephyrproject/modules/lib/picolibc/cmake/picolibc.cmake:135 (_picolibc_supported_compile_options)"
+      - "/home/vboxuser/zephyrproject/modules/lib/picolibc/CMakeLists.txt:331 (picolibc_supported_compile_options)"
+    directories:
+      source: "/home/vboxuser/zephyrproject/wasm-micro-runtime/product-mini/platforms/zephyr/thesis-example-fw/qemu_rv64_nmsis_opt/modules/picolibc/CMakeFiles/CMakeTmp"
+      binary: "/home/vboxuser/zephyrproject/wasm-micro-runtime/product-mini/platforms/zephyr/thesis-example-fw/qemu_rv64_nmsis_opt/modules/picolibc/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/vboxuser/zephyrproject/zephyr/cmake/modules"
+    buildResult:
+      variable: "_fno_stack_protector"
+      cached: true
+      stdout: |
+        Change Dir: '/home/vboxuser/zephyrproject/wasm-micro-runtime/product-mini/platforms/zephyr/thesis-example-fw/qemu_rv64_nmsis_opt/modules/picolibc/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): /usr/bin/ninja -v cmTC_897e1
+        [1/2] /home/vboxuser/toolchains/riscv/bin/riscv64-unknown-elf-gcc   -Werror=missing-declarations -Werror=attributes -Werror=implicit-function-declaration -Wno-unused-command-line-argument -fno-stack-protector -o CMakeFiles/cmTC_897e1.dir/simple-main.c.obj -c /home/vboxuser/zephyrproject/modules/lib/picolibc/cmake/simple-main.c
+        [2/2] : && /usr/bin/cmake -E rm -f libcmTC_897e1.a && /home/vboxuser/toolchains/riscv/bin/riscv64-unknown-elf-ar qc libcmTC_897e1.a  CMakeFiles/cmTC_897e1.dir/simple-main.c.obj && /home/vboxuser/toolchains/riscv/bin/riscv64-unknown-elf-ranlib libcmTC_897e1.a && :
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/home/vboxuser/zephyrproject/modules/lib/picolibc/cmake/picolibc.cmake:110 (try_compile)"
+      - "/home/vboxuser/zephyrproject/modules/lib/picolibc/cmake/picolibc.cmake:135 (_picolibc_supported_compile_options)"
+      - "/home/vboxuser/zephyrproject/modules/lib/picolibc/CMakeLists.txt:331 (picolibc_supported_compile_options)"
+    directories:
+      source: "/home/vboxuser/zephyrproject/wasm-micro-runtime/product-mini/platforms/zephyr/thesis-example-fw/qemu_rv64_nmsis_opt/modules/picolibc/CMakeFiles/CMakeTmp"
+      binary: "/home/vboxuser/zephyrproject/wasm-micro-runtime/product-mini/platforms/zephyr/thesis-example-fw/qemu_rv64_nmsis_opt/modules/picolibc/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/vboxuser/zephyrproject/zephyr/cmake/modules"
+    buildResult:
+      variable: "_ffunction_sections"
+      cached: true
+      stdout: |
+        Change Dir: '/home/vboxuser/zephyrproject/wasm-micro-runtime/product-mini/platforms/zephyr/thesis-example-fw/qemu_rv64_nmsis_opt/modules/picolibc/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): /usr/bin/ninja -v cmTC_c3556
+        [1/2] /home/vboxuser/toolchains/riscv/bin/riscv64-unknown-elf-gcc   -Werror=missing-declarations -Werror=attributes -Werror=implicit-function-declaration -Wno-unused-command-line-argument -ffunction-sections -o CMakeFiles/cmTC_c3556.dir/simple-main.c.obj -c /home/vboxuser/zephyrproject/modules/lib/picolibc/cmake/simple-main.c
+        [2/2] : && /usr/bin/cmake -E rm -f libcmTC_c3556.a && /home/vboxuser/toolchains/riscv/bin/riscv64-unknown-elf-ar qc libcmTC_c3556.a  CMakeFiles/cmTC_c3556.dir/simple-main.c.obj && /home/vboxuser/toolchains/riscv/bin/riscv64-unknown-elf-ranlib libcmTC_c3556.a && :
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/home/vboxuser/zephyrproject/modules/lib/picolibc/cmake/picolibc.cmake:110 (try_compile)"
+      - "/home/vboxuser/zephyrproject/modules/lib/picolibc/cmake/picolibc.cmake:135 (_picolibc_supported_compile_options)"
+      - "/home/vboxuser/zephyrproject/modules/lib/picolibc/CMakeLists.txt:331 (picolibc_supported_compile_options)"
+    directories:
+      source: "/home/vboxuser/zephyrproject/wasm-micro-runtime/product-mini/platforms/zephyr/thesis-example-fw/qemu_rv64_nmsis_opt/modules/picolibc/CMakeFiles/CMakeTmp"
+      binary: "/home/vboxuser/zephyrproject/wasm-micro-runtime/product-mini/platforms/zephyr/thesis-example-fw/qemu_rv64_nmsis_opt/modules/picolibc/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/vboxuser/zephyrproject/zephyr/cmake/modules"
+    buildResult:
+      variable: "_fdata_sections"
+      cached: true
+      stdout: |
+        Change Dir: '/home/vboxuser/zephyrproject/wasm-micro-runtime/product-mini/platforms/zephyr/thesis-example-fw/qemu_rv64_nmsis_opt/modules/picolibc/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): /usr/bin/ninja -v cmTC_870c2
+        [1/2] /home/vboxuser/toolchains/riscv/bin/riscv64-unknown-elf-gcc   -Werror=missing-declarations -Werror=attributes -Werror=implicit-function-declaration -Wno-unused-command-line-argument -fdata-sections -o CMakeFiles/cmTC_870c2.dir/simple-main.c.obj -c /home/vboxuser/zephyrproject/modules/lib/picolibc/cmake/simple-main.c
+        [2/2] : && /usr/bin/cmake -E rm -f libcmTC_870c2.a && /home/vboxuser/toolchains/riscv/bin/riscv64-unknown-elf-ar qc libcmTC_870c2.a  CMakeFiles/cmTC_870c2.dir/simple-main.c.obj && /home/vboxuser/toolchains/riscv/bin/riscv64-unknown-elf-ranlib libcmTC_870c2.a && :
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/home/vboxuser/zephyrproject/modules/lib/picolibc/cmake/picolibc.cmake:110 (try_compile)"
+      - "/home/vboxuser/zephyrproject/modules/lib/picolibc/cmake/picolibc.cmake:135 (_picolibc_supported_compile_options)"
+      - "/home/vboxuser/zephyrproject/modules/lib/picolibc/CMakeLists.txt:331 (picolibc_supported_compile_options)"
+    directories:
+      source: "/home/vboxuser/zephyrproject/wasm-micro-runtime/product-mini/platforms/zephyr/thesis-example-fw/qemu_rv64_nmsis_opt/modules/picolibc/CMakeFiles/CMakeTmp"
+      binary: "/home/vboxuser/zephyrproject/wasm-micro-runtime/product-mini/platforms/zephyr/thesis-example-fw/qemu_rv64_nmsis_opt/modules/picolibc/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/vboxuser/zephyrproject/zephyr/cmake/modules"
+    buildResult:
+      variable: "_Wall"
+      cached: true
+      stdout: |
+        Change Dir: '/home/vboxuser/zephyrproject/wasm-micro-runtime/product-mini/platforms/zephyr/thesis-example-fw/qemu_rv64_nmsis_opt/modules/picolibc/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): /usr/bin/ninja -v cmTC_0a75a
+        [1/2] /home/vboxuser/toolchains/riscv/bin/riscv64-unknown-elf-gcc   -Werror=missing-declarations -Werror=attributes -Werror=implicit-function-declaration -Wno-unused-command-line-argument -Wall -o CMakeFiles/cmTC_0a75a.dir/simple-main.c.obj -c /home/vboxuser/zephyrproject/modules/lib/picolibc/cmake/simple-main.c
+        [2/2] : && /usr/bin/cmake -E rm -f libcmTC_0a75a.a && /home/vboxuser/toolchains/riscv/bin/riscv64-unknown-elf-ar qc libcmTC_0a75a.a  CMakeFiles/cmTC_0a75a.dir/simple-main.c.obj && /home/vboxuser/toolchains/riscv/bin/riscv64-unknown-elf-ranlib libcmTC_0a75a.a && :
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/home/vboxuser/zephyrproject/modules/lib/picolibc/cmake/picolibc.cmake:110 (try_compile)"
+      - "/home/vboxuser/zephyrproject/modules/lib/picolibc/cmake/picolibc.cmake:135 (_picolibc_supported_compile_options)"
+      - "/home/vboxuser/zephyrproject/modules/lib/picolibc/CMakeLists.txt:331 (picolibc_supported_compile_options)"
+    directories:
+      source: "/home/vboxuser/zephyrproject/wasm-micro-runtime/product-mini/platforms/zephyr/thesis-example-fw/qemu_rv64_nmsis_opt/modules/picolibc/CMakeFiles/CMakeTmp"
+      binary: "/home/vboxuser/zephyrproject/wasm-micro-runtime/product-mini/platforms/zephyr/thesis-example-fw/qemu_rv64_nmsis_opt/modules/picolibc/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/vboxuser/zephyrproject/zephyr/cmake/modules"
+    buildResult:
+      variable: "_Wextra"
+      cached: true
+      stdout: |
+        Change Dir: '/home/vboxuser/zephyrproject/wasm-micro-runtime/product-mini/platforms/zephyr/thesis-example-fw/qemu_rv64_nmsis_opt/modules/picolibc/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): /usr/bin/ninja -v cmTC_98ff2
+        [1/2] /home/vboxuser/toolchains/riscv/bin/riscv64-unknown-elf-gcc   -Werror=missing-declarations -Werror=attributes -Werror=implicit-function-declaration -Wno-unused-command-line-argument -Wextra -o CMakeFiles/cmTC_98ff2.dir/simple-main.c.obj -c /home/vboxuser/zephyrproject/modules/lib/picolibc/cmake/simple-main.c
+        [2/2] : && /usr/bin/cmake -E rm -f libcmTC_98ff2.a && /home/vboxuser/toolchains/riscv/bin/riscv64-unknown-elf-ar qc libcmTC_98ff2.a  CMakeFiles/cmTC_98ff2.dir/simple-main.c.obj && /home/vboxuser/toolchains/riscv/bin/riscv64-unknown-elf-ranlib libcmTC_98ff2.a && :
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/home/vboxuser/zephyrproject/modules/lib/picolibc/cmake/picolibc.cmake:110 (try_compile)"
+      - "/home/vboxuser/zephyrproject/modules/lib/picolibc/cmake/picolibc.cmake:135 (_picolibc_supported_compile_options)"
+      - "/home/vboxuser/zephyrproject/modules/lib/picolibc/CMakeLists.txt:331 (picolibc_supported_compile_options)"
+    directories:
+      source: "/home/vboxuser/zephyrproject/wasm-micro-runtime/product-mini/platforms/zephyr/thesis-example-fw/qemu_rv64_nmsis_opt/modules/picolibc/CMakeFiles/CMakeTmp"
+      binary: "/home/vboxuser/zephyrproject/wasm-micro-runtime/product-mini/platforms/zephyr/thesis-example-fw/qemu_rv64_nmsis_opt/modules/picolibc/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/vboxuser/zephyrproject/zephyr/cmake/modules"
+    buildResult:
+      variable: "_Werror_implicit_function_declaration"
+      cached: true
+      stdout: |
+        Change Dir: '/home/vboxuser/zephyrproject/wasm-micro-runtime/product-mini/platforms/zephyr/thesis-example-fw/qemu_rv64_nmsis_opt/modules/picolibc/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): /usr/bin/ninja -v cmTC_d65e1
+        [1/2] /home/vboxuser/toolchains/riscv/bin/riscv64-unknown-elf-gcc   -Werror=missing-declarations -Werror=attributes -Werror=implicit-function-declaration -Wno-unused-command-line-argument -Werror=implicit-function-declaration -o CMakeFiles/cmTC_d65e1.dir/simple-main.c.obj -c /home/vboxuser/zephyrproject/modules/lib/picolibc/cmake/simple-main.c
+        [2/2] : && /usr/bin/cmake -E rm -f libcmTC_d65e1.a && /home/vboxuser/toolchains/riscv/bin/riscv64-unknown-elf-ar qc libcmTC_d65e1.a  CMakeFiles/cmTC_d65e1.dir/simple-main.c.obj && /home/vboxuser/toolchains/riscv/bin/riscv64-unknown-elf-ranlib libcmTC_d65e1.a && :
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/home/vboxuser/zephyrproject/modules/lib/picolibc/cmake/picolibc.cmake:110 (try_compile)"
+      - "/home/vboxuser/zephyrproject/modules/lib/picolibc/cmake/picolibc.cmake:135 (_picolibc_supported_compile_options)"
+      - "/home/vboxuser/zephyrproject/modules/lib/picolibc/CMakeLists.txt:331 (picolibc_supported_compile_options)"
+    directories:
+      source: "/home/vboxuser/zephyrproject/wasm-micro-runtime/product-mini/platforms/zephyr/thesis-example-fw/qemu_rv64_nmsis_opt/modules/picolibc/CMakeFiles/CMakeTmp"
+      binary: "/home/vboxuser/zephyrproject/wasm-micro-runtime/product-mini/platforms/zephyr/thesis-example-fw/qemu_rv64_nmsis_opt/modules/picolibc/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/vboxuser/zephyrproject/zephyr/cmake/modules"
+    buildResult:
+      variable: "_Werror_vla"
+      cached: true
+      stdout: |
+        Change Dir: '/home/vboxuser/zephyrproject/wasm-micro-runtime/product-mini/platforms/zephyr/thesis-example-fw/qemu_rv64_nmsis_opt/modules/picolibc/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): /usr/bin/ninja -v cmTC_42d43
+        [1/2] /home/vboxuser/toolchains/riscv/bin/riscv64-unknown-elf-gcc   -Werror=missing-declarations -Werror=attributes -Werror=implicit-function-declaration -Wno-unused-command-line-argument -Werror=vla -o CMakeFiles/cmTC_42d43.dir/simple-main.c.obj -c /home/vboxuser/zephyrproject/modules/lib/picolibc/cmake/simple-main.c
+        [2/2] : && /usr/bin/cmake -E rm -f libcmTC_42d43.a && /home/vboxuser/toolchains/riscv/bin/riscv64-unknown-elf-ar qc libcmTC_42d43.a  CMakeFiles/cmTC_42d43.dir/simple-main.c.obj && /home/vboxuser/toolchains/riscv/bin/riscv64-unknown-elf-ranlib libcmTC_42d43.a && :
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/home/vboxuser/zephyrproject/modules/lib/picolibc/cmake/picolibc.cmake:110 (try_compile)"
+      - "/home/vboxuser/zephyrproject/modules/lib/picolibc/cmake/picolibc.cmake:135 (_picolibc_supported_compile_options)"
+      - "/home/vboxuser/zephyrproject/modules/lib/picolibc/CMakeLists.txt:331 (picolibc_supported_compile_options)"
+    directories:
+      source: "/home/vboxuser/zephyrproject/wasm-micro-runtime/product-mini/platforms/zephyr/thesis-example-fw/qemu_rv64_nmsis_opt/modules/picolibc/CMakeFiles/CMakeTmp"
+      binary: "/home/vboxuser/zephyrproject/wasm-micro-runtime/product-mini/platforms/zephyr/thesis-example-fw/qemu_rv64_nmsis_opt/modules/picolibc/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/vboxuser/zephyrproject/zephyr/cmake/modules"
+    buildResult:
+      variable: "_Warray_bounds"
+      cached: true
+      stdout: |
+        Change Dir: '/home/vboxuser/zephyrproject/wasm-micro-runtime/product-mini/platforms/zephyr/thesis-example-fw/qemu_rv64_nmsis_opt/modules/picolibc/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): /usr/bin/ninja -v cmTC_85709
+        [1/2] /home/vboxuser/toolchains/riscv/bin/riscv64-unknown-elf-gcc   -Werror=missing-declarations -Werror=attributes -Werror=implicit-function-declaration -Wno-unused-command-line-argument -Warray-bounds -o CMakeFiles/cmTC_85709.dir/simple-main.c.obj -c /home/vboxuser/zephyrproject/modules/lib/picolibc/cmake/simple-main.c
+        [2/2] : && /usr/bin/cmake -E rm -f libcmTC_85709.a && /home/vboxuser/toolchains/riscv/bin/riscv64-unknown-elf-ar qc libcmTC_85709.a  CMakeFiles/cmTC_85709.dir/simple-main.c.obj && /home/vboxuser/toolchains/riscv/bin/riscv64-unknown-elf-ranlib libcmTC_85709.a && :
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/home/vboxuser/zephyrproject/modules/lib/picolibc/cmake/picolibc.cmake:110 (try_compile)"
+      - "/home/vboxuser/zephyrproject/modules/lib/picolibc/cmake/picolibc.cmake:135 (_picolibc_supported_compile_options)"
+      - "/home/vboxuser/zephyrproject/modules/lib/picolibc/CMakeLists.txt:331 (picolibc_supported_compile_options)"
+    directories:
+      source: "/home/vboxuser/zephyrproject/wasm-micro-runtime/product-mini/platforms/zephyr/thesis-example-fw/qemu_rv64_nmsis_opt/modules/picolibc/CMakeFiles/CMakeTmp"
+      binary: "/home/vboxuser/zephyrproject/wasm-micro-runtime/product-mini/platforms/zephyr/thesis-example-fw/qemu_rv64_nmsis_opt/modules/picolibc/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/vboxuser/zephyrproject/zephyr/cmake/modules"
+    buildResult:
+      variable: "_Wold_style_definition"
+      cached: true
+      stdout: |
+        Change Dir: '/home/vboxuser/zephyrproject/wasm-micro-runtime/product-mini/platforms/zephyr/thesis-example-fw/qemu_rv64_nmsis_opt/modules/picolibc/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): /usr/bin/ninja -v cmTC_f4509
+        [1/2] /home/vboxuser/toolchains/riscv/bin/riscv64-unknown-elf-gcc   -Werror=missing-declarations -Werror=attributes -Werror=implicit-function-declaration -Wno-unused-command-line-argument -Wold-style-definition -o CMakeFiles/cmTC_f4509.dir/simple-main.c.obj -c /home/vboxuser/zephyrproject/modules/lib/picolibc/cmake/simple-main.c
+        [2/2] : && /usr/bin/cmake -E rm -f libcmTC_f4509.a && /home/vboxuser/toolchains/riscv/bin/riscv64-unknown-elf-ar qc libcmTC_f4509.a  CMakeFiles/cmTC_f4509.dir/simple-main.c.obj && /home/vboxuser/toolchains/riscv/bin/riscv64-unknown-elf-ranlib libcmTC_f4509.a && :
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/home/vboxuser/zephyrproject/modules/lib/picolibc/cmake/picolibc.cmake:110 (try_compile)"
+      - "/home/vboxuser/zephyrproject/modules/lib/picolibc/cmake/picolibc.cmake:135 (_picolibc_supported_compile_options)"
+      - "/home/vboxuser/zephyrproject/modules/lib/picolibc/CMakeLists.txt:331 (picolibc_supported_compile_options)"
+    directories:
+      source: "/home/vboxuser/zephyrproject/wasm-micro-runtime/product-mini/platforms/zephyr/thesis-example-fw/qemu_rv64_nmsis_opt/modules/picolibc/CMakeFiles/CMakeTmp"
+      binary: "/home/vboxuser/zephyrproject/wasm-micro-runtime/product-mini/platforms/zephyr/thesis-example-fw/qemu_rv64_nmsis_opt/modules/picolibc/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/vboxuser/zephyrproject/zephyr/cmake/modules"
+    buildResult:
+      variable: "_frounding_math"
+      cached: true
+      stdout: |
+        Change Dir: '/home/vboxuser/zephyrproject/wasm-micro-runtime/product-mini/platforms/zephyr/thesis-example-fw/qemu_rv64_nmsis_opt/modules/picolibc/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): /usr/bin/ninja -v cmTC_67697
+        [1/2] /home/vboxuser/toolchains/riscv/bin/riscv64-unknown-elf-gcc   -Werror=missing-declarations -Werror=attributes -Werror=implicit-function-declaration -Wno-unused-command-line-argument -frounding-math -o CMakeFiles/cmTC_67697.dir/simple-main.c.obj -c /home/vboxuser/zephyrproject/modules/lib/picolibc/cmake/simple-main.c
+        [2/2] : && /usr/bin/cmake -E rm -f libcmTC_67697.a && /home/vboxuser/toolchains/riscv/bin/riscv64-unknown-elf-ar qc libcmTC_67697.a  CMakeFiles/cmTC_67697.dir/simple-main.c.obj && /home/vboxuser/toolchains/riscv/bin/riscv64-unknown-elf-ranlib libcmTC_67697.a && :
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/home/vboxuser/zephyrproject/modules/lib/picolibc/cmake/picolibc.cmake:110 (try_compile)"
+      - "/home/vboxuser/zephyrproject/modules/lib/picolibc/cmake/picolibc.cmake:135 (_picolibc_supported_compile_options)"
+      - "/home/vboxuser/zephyrproject/modules/lib/picolibc/CMakeLists.txt:331 (picolibc_supported_compile_options)"
+    directories:
+      source: "/home/vboxuser/zephyrproject/wasm-micro-runtime/product-mini/platforms/zephyr/thesis-example-fw/qemu_rv64_nmsis_opt/modules/picolibc/CMakeFiles/CMakeTmp"
+      binary: "/home/vboxuser/zephyrproject/wasm-micro-runtime/product-mini/platforms/zephyr/thesis-example-fw/qemu_rv64_nmsis_opt/modules/picolibc/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/vboxuser/zephyrproject/zephyr/cmake/modules"
+    buildResult:
+      variable: "_fsignaling_nans"
+      cached: true
+      stdout: |
+        Change Dir: '/home/vboxuser/zephyrproject/wasm-micro-runtime/product-mini/platforms/zephyr/thesis-example-fw/qemu_rv64_nmsis_opt/modules/picolibc/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): /usr/bin/ninja -v cmTC_400bc
+        [1/2] /home/vboxuser/toolchains/riscv/bin/riscv64-unknown-elf-gcc   -Werror=missing-declarations -Werror=attributes -Werror=implicit-function-declaration -Wno-unused-command-line-argument -fsignaling-nans -o CMakeFiles/cmTC_400bc.dir/simple-main.c.obj -c /home/vboxuser/zephyrproject/modules/lib/picolibc/cmake/simple-main.c
+        [2/2] : && /usr/bin/cmake -E rm -f libcmTC_400bc.a && /home/vboxuser/toolchains/riscv/bin/riscv64-unknown-elf-ar qc libcmTC_400bc.a  CMakeFiles/cmTC_400bc.dir/simple-main.c.obj && /home/vboxuser/toolchains/riscv/bin/riscv64-unknown-elf-ranlib libcmTC_400bc.a && :
+        
+      exitCode: 0
+...

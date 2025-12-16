@@ -10,6 +10,8 @@
  */
 
 #define MAX_BENCH_LEN 1024
+#define THESIS_TARGET_M4    1
+#define THESIS_TARGET_RISC_V32 1
 
 typedef struct {
     const char *name;
@@ -21,6 +23,12 @@ typedef struct {
 static unsigned int input1_buf[MAX_BENCH_LEN];
 static unsigned int input2_buf[MAX_BENCH_LEN];
 static unsigned int scratch_buf[MAX_BENCH_LEN];
+#if defined(THESIS_TARGET_M4) || defined(THESIS_TARGET_RISCV32)
+/* q15 buffers used on MCU/RISC-V targets, mirroring the native example. */
+static short q15_input1_buf[MAX_BENCH_LEN];
+static short q15_input2_buf[MAX_BENCH_LEN];
+static short q15_scratch_buf[MAX_BENCH_LEN];
+#endif
 static volatile float wasm_sink; /* keep a visible side-effect */
 
 static void
@@ -35,6 +43,57 @@ init_buffers(int len)
         input2_buf[i] = f32_input2[i % seed_len];
     }
 }
+#if defined(THESIS_TARGET_M4) || defined(THESIS_TARGET_RISCV32)
+
+static void
+wasm_prepare_q15_buffers(int len)
+{
+    if (len > MAX_BENCH_LEN)
+        len = MAX_BENCH_LEN;
+
+    float *f1 = (float *)input1_buf;
+    float *f2 = (float *)input2_buf;
+    float max_abs1 = 0.0f;
+    float max_abs2 = 0.0f;
+
+    for (int i = 0; i < len; i++) {
+        float v1 = f1[i];
+        float v2 = f2[i];
+        float a1 = v1 >= 0.0f ? v1 : -v1;
+        float a2 = v2 >= 0.0f ? v2 : -v2;
+        if (a1 > max_abs1)
+            max_abs1 = a1;
+        if (a2 > max_abs2)
+            max_abs2 = a2;
+    }
+
+    float scale1 = max_abs1 > 0.0f ? 32767.0f / max_abs1 : 1.0f;
+    float scale2 = max_abs2 > 0.0f ? 32767.0f / max_abs2 : 1.0f;
+
+    for (int i = 0; i < len; i++) {
+        float q1 = f1[i] * scale1;
+        float q2 = f2[i] * scale2;
+        if (q1 > 32767.0f)
+            q1 = 32767.0f;
+        if (q1 < -32768.0f)
+            q1 = -32768.0f;
+        if (q2 > 32767.0f)
+            q2 = 32767.0f;
+        if (q2 < -32768.0f)
+            q2 = -32768.0f;
+
+        if (q1 >= 0.0f)
+            q15_input1_buf[i] = (short)(q1 + 0.5f);
+        else
+            q15_input1_buf[i] = (short)(q1 - 0.5f);
+
+        if (q2 >= 0.0f)
+            q15_input2_buf[i] = (short)(q2 + 0.5f);
+        else
+            q15_input2_buf[i] = (short)(q2 - 0.5f);
+    }
+}
+#endif
 
 /* ===================== Pure WASM kernels ===================== */
 
@@ -188,6 +247,77 @@ wasm_rmsnorm(float *x, int len, float *y)
     for (int i = 0; i < len; i++)
         y[i] = x[i] * inv_rms;
 }
+#if defined(THESIS_TARGET_M4) || defined(THESIS_TARGET_RISCV32)
+
+/* ===================== Pure WASM q15 kernels ===================== */
+
+static inline short
+wasm_sat_q15(int v)
+{
+    if (v > 32767)
+        return 32767;
+    if (v < -32768)
+        return -32768;
+    return (short)v;
+}
+
+static void
+wasm_vec_add_q15(short *a, short *b, int len)
+{
+    for (int i = 0; i < len; i++) {
+        int s = (int)a[i] + (int)b[i];
+        a[i] = wasm_sat_q15(s);
+    }
+}
+
+static void
+wasm_vec_mul_q15(short *a, short *b, int len)
+{
+    for (int i = 0; i < len; i++) {
+        int prod = (int)a[i] * (int)b[i]; /* q15 x q15 -> q30 */
+        prod = (prod + (1 << 14)) >> 15;  /* back to q15 with rounding */
+        a[i] = wasm_sat_q15(prod);
+    }
+}
+
+static long long
+wasm_dot_product_q15(short *a, short *b, int len)
+{
+    long long acc = 0;
+    for (int i = 0; i < len; i++)
+        acc += (int)a[i] * (int)b[i];
+    return acc;
+}
+
+static void
+wasm_mat_mul_q15(short *A, int m, int k, short *B, int k2, int n)
+{
+    if (k2 != k)
+        return;
+
+    short *C = q15_scratch_buf;
+    for (int i = 0; i < m; i++) {
+        for (int j = 0; j < n; j++) {
+            int acc = 0;
+            for (int kk = 0; kk < k; kk++) {
+                int a_ik = A[i * k + kk];
+                int b_kj = B[kk * n + j];
+                int prod = a_ik * b_kj;
+                acc += (prod + (1 << 14)) >> 15;
+            }
+            C[i * n + j] = wasm_sat_q15(acc);
+        }
+    }
+
+    /* Prevent the compiler/LLVM from optimizing the matmul away
+     * in the WASM build by consuming the results.
+     */
+    for (int idx = 0; idx < m * n; idx++) {
+        wasm_sink += (float)C[idx];
+    }
+}
+
+#endif
 
 /* ===================== Benchmark driver ===================== */
 
@@ -225,6 +355,9 @@ main(int argc, char **argv)
             continue;
 
         init_buffers(needed);
+    #if defined(THESIS_TARGET_M4) || defined(THESIS_TARGET_RISCV32)
+        wasm_prepare_q15_buffers(needed);
+    #endif
 
         float *f_in1 = (float *)input1_buf;
         float *f_in2 = (float *)input2_buf;
@@ -234,11 +367,43 @@ main(int argc, char **argv)
 
         unsigned int start, end;
 
+        /* Always measure the float vec_abs kernel. */
         start = thesis_get_ticks();
         wasm_vec_abs(f_in1, c->vec_len);
         end = thesis_get_ticks();
         printf("[vec_abs][wasm] Elapsed ticks: %u\n", end - start);
 
+    #if defined(THESIS_TARGET_M4) || defined(THESIS_TARGET_RISCV32)
+        /* On M4/RISC-V, run only the q15 variants for
+         * vec_add/vec_mul/dot_product/mat_mul.
+         */
+        start = thesis_get_ticks();
+        wasm_vec_add_q15(q15_input1_buf, q15_input2_buf, c->vec_len);
+        end = thesis_get_ticks();
+        printf("[vec_add_q15][wasm] Elapsed ticks: %u\n", end - start);
+
+        start = thesis_get_ticks();
+        wasm_vec_mul_q15(q15_input1_buf, q15_input2_buf, c->vec_len);
+        end = thesis_get_ticks();
+        printf("[vec_mul_q15][wasm] Elapsed ticks: %u\n", end - start);
+
+        start = thesis_get_ticks();
+        wasm_sink += (float)wasm_dot_product_q15(q15_input1_buf,
+                                                 q15_input2_buf,
+                                                 c->vec_len);
+        end = thesis_get_ticks();
+        printf("[dot_product_q15][wasm] Elapsed ticks: %u\n",
+               end - start);
+
+        start = thesis_get_ticks();
+        wasm_mat_mul_q15(q15_input1_buf, c->mat_m, c->mat_k,
+                         q15_input2_buf, c->mat_k, c->mat_n);
+        end = thesis_get_ticks();
+        printf("[mat_mul_q15][wasm] Elapsed ticks: %u (m=%d,k=%d,n=%d)\n",
+               end - start, c->mat_m, c->mat_k, c->mat_n);
+
+    #else
+        /* On other targets (e.g. A53), run only the float variants. */
         start = thesis_get_ticks();
         wasm_vec_add(f_in1, f_in2, c->vec_len);
         end = thesis_get_ticks();
@@ -261,6 +426,7 @@ main(int argc, char **argv)
         end = thesis_get_ticks();
         printf("[mat_mul][wasm] Elapsed ticks: %u (m=%d,k=%d,n=%d)\n",
                end - start, c->mat_m, c->mat_k, c->mat_n);
+    #endif
 
         start = thesis_get_ticks();
         wasm_conv2d_small(f_in1, c->img_h, c->img_w,

@@ -1,0 +1,51 @@
+% Requires: \usepackage{longtable} in preamble
+\begin{center}
+\begin{longtable}{l r r r r}
+\caption{Delta (Zephyr - HW-Optimized) across kernels and sizes for qemu_cortex_a53}\\
+\label{tab:combined_qemu_cortex_a53}\\
+\hline\nKernel & N & Zephyr & HW-Opt & Delta \\ 
+\hline\n\endfirsthead
+\hline\nKernel & N & Zephyr & HW-Opt & Delta \\ 
+\hline\n\endhead
+conv2d_small & 4 & 166 & 2,708 & -2,542 \\ 
+conv2d_small & 16 & 510 & 3,052 & -2,542 \\ 
+conv2d_small & 64 & 1,846 & 4,394 & -2,548 \\ 
+conv2d_small & 256 & 7,115 & 9,658 & -2,543 \\ 
+conv2d_small & 1024 & 28,017 & 30,560 & -2,543 \\ 
+dot_product & 4 & 43 & 2,149 & -2,106 \\ 
+dot_product & 16 & 67 & 2,173 & -2,106 \\ 
+dot_product & 64 & 169 & 2,275 & -2,106 \\ 
+dot_product & 256 & 577 & 2,689 & -2,112 \\ 
+dot_product & 1024 & 2,209 & 4,321 & -2,112 \\ 
+mat_mul & 4 & 268 & 2,636 & -2,368 \\ 
+mat_mul & 16 & 730 & 3,104 & -2,374 \\ 
+mat_mul & 64 & 3,174 & 5,548 & -2,374 \\ 
+mat_mul & 256 & 16,803 & 19,172 & -2,369 \\ 
+mat_mul & 1024 & 103,229 & 105,597 & -2,368 \\ 
+rmsnorm & 4 & 88 & 2,144 & -2,056 \\ 
+rmsnorm & 16 & 156 & 2,212 & -2,056 \\ 
+rmsnorm & 64 & 516 & 2,572 & -2,056 \\ 
+rmsnorm & 256 & 1,956 & 4,012 & -2,056 \\ 
+rmsnorm & 1024 & 7,721 & 9,778 & -2,057 \\ 
+softmax & 4 & 172 & 2,234 & -2,062 \\ 
+softmax & 16 & 324 & 2,380 & -2,056 \\ 
+softmax & 64 & 1,176 & 3,232 & -2,056 \\ 
+softmax & 256 & 4,584 & 6,640 & -2,056 \\ 
+softmax & 1024 & 18,227 & 20,278 & -2,051 \\ 
+vec_abs & 4 & 20 & 1,920 & -1,900 \\ 
+vec_abs & 16 & 47 & 1,947 & -1,900 \\ 
+vec_abs & 64 & 155 & 2,055 & -1,900 \\ 
+vec_abs & 256 & 592 & 2,487 & -1,895 \\ 
+vec_abs & 1024 & 2,315 & 4,215 & -1,900 \\ 
+vec_add & 4 & 27 & 2,133 & -2,106 \\ 
+vec_add & 16 & 57 & 2,163 & -2,106 \\ 
+vec_add & 64 & 177 & 2,283 & -2,106 \\ 
+vec_add & 256 & 657 & 2,763 & -2,106 \\ 
+vec_add & 1024 & 2,582 & 4,689 & -2,107 \\ 
+vec_mul & 4 & 27 & 2,139 & -2,112 \\ 
+vec_mul & 16 & 57 & 2,163 & -2,106 \\ 
+vec_mul & 64 & 177 & 2,283 & -2,106 \\ 
+vec_mul & 256 & 657 & 2,763 & -2,106 \\ 
+vec_mul & 1024 & 2,577 & 4,683 & -2,106 \\ 
+\hline\n\end{longtable}
+\end{center}

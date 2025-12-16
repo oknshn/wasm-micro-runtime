@@ -1,0 +1,16 @@
+\begin{table}[tb]
+    \centering
+    \caption{Delta (Zephyr - HW-Optimized) for riscv32 / vec_mul}
+    \label{tab:delta_riscv32_vec_mul}
+    \scriptsize
+    \begin{tabular}{r r r r}
+        \hline
+        \textbf{N} & \textbf{Zephyr} & \textbf{HW-Opt} & \textbf{Delta} \\\n+        \hline
+        4 & 10 & 113 & -103\\
+        16 & 21 & 124 & -103\\
+        64 & 74 & 177 & -103\\
+        256 & 285 & 388 & -103\\
+        1024 & 1,130 & 1,233 & -103\\
+        \hline
+    \end{tabular}
+    \vspace{2mm}\\\n    Slope vs log2(N): 0.000 \ (R^2=nan)\n\end{table}

@@ -1,0 +1,16 @@
+\begin{table}[tb]
+    \centering
+    \caption{Delta (Zephyr - HW-Optimized) for max32690 / conv2d_small}
+    \label{tab:delta_max32690_conv2d_small}
+    \scriptsize
+    \begin{tabular}{r r r r}
+        \hline
+        \textbf{N} & \textbf{Zephyr} & \textbf{HW-Opt} & \textbf{Delta} \\\n+        \hline
+        4 & 824 & 3,288 & -2,464\\
+        16 & 1,592 & 4,091 & -2,499\\
+        64 & 4,664 & 7,307 & -2,643\\
+        256 & 16,952 & 20,188 & -3,236\\
+        1024 & 66,130 & 71,669 & -5,539\\
+        \hline
+    \end{tabular}
+    \vspace{2mm}\\\n    Slope vs log2(N): -344.350 \ (R^2=0.699)\n\end{table}
